@@ -1,0 +1,12 @@
+[package]
+name = "ggr_sim"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "The game, engine-free: clock, scheduler, space, characters, quests, economy, staff, progression, building."
+
+[dependencies]
+ggr_core.workspace = true
+ggr_content.workspace = true
+serde.workspace = true
+serde_json.workspace = true

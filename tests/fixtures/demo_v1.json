@@ -1,0 +1,1867 @@
+{
+  "format": "guildmasters-seat-save",
+  "format_version": 1,
+  "build": "0.8.0",
+  "summary": {
+    "day": 3,
+    "minute": 3960,
+    "gold": 740,
+    "roster": 5,
+    "renown": 13,
+    "label": "fixture demo_v1"
+  },
+  "sections": {
+    "candidates": {
+      "version": 1,
+      "data": {
+        "candidates": [
+          {
+            "aptitude": [
+              116,
+              69,
+              58,
+              136
+            ],
+            "arrived": 2712,
+            "attrs": [
+              9,
+              18,
+              12,
+              13,
+              5,
+              5
+            ],
+            "cost": 45,
+            "expires": 4152,
+            "family": 11,
+            "given": 16,
+            "id": 4,
+            "rank": 0,
+            "staff_role": 2,
+            "status": "Waiting",
+            "volunteer": false
+          },
+          {
+            "aptitude": [
+              143,
+              52,
+              114,
+              79
+            ],
+            "arrived": 3429,
+            "attrs": [
+              8,
+              5,
+              11,
+              10,
+              8,
+              6
+            ],
+            "cost": 100,
+            "expires": 4869,
+            "family": 6,
+            "given": 9,
+            "id": 5,
+            "rank": 1,
+            "staff_role": null,
+            "status": "Waiting",
+            "volunteer": false
+          }
+        ],
+        "next_candidate_id": 6,
+        "promotions": [
+          {
+            "character": 2,
+            "expires": 4539,
+            "fee": 40,
+            "to_rank": 1
+          }
+        ]
+      }
+    },
+    "characters": {
+      "version": 1,
+      "data": [
+        {
+          "activity": "None",
+          "adv": {
+            "aptitude": [
+              106,
+              76,
+              124,
+              146
+            ],
+            "aspiration": null,
+            "class": 3,
+            "equipment": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "gold_earned": 34,
+            "quests_at_rank": 1,
+            "quests_failed": 0,
+            "quests_succeeded": 1,
+            "rested_until": 2180,
+            "skill_xp": [
+              226,
+              236,
+              7,
+              0,
+              0,
+              12,
+              14,
+              28
+            ],
+            "xp": 30
+          },
+          "attrs": [
+            14,
+            16,
+            15,
+            18,
+            5,
+            20
+          ],
+          "cell": [
+            6,
+            21
+          ],
+          "family": 10,
+          "given": 5,
+          "hired_minute": 480,
+          "hunger": 0,
+          "id": 0,
+          "injured_until": -1,
+          "quest": null,
+          "rank": 0,
+          "serial": 412,
+          "staff": null,
+          "state": "Travel",
+          "state_entered": 3949,
+          "walk": {
+            "arrive": 3961,
+            "depart": 3949,
+            "from": [
+              6,
+              21
+            ],
+            "purpose": {
+              "ToSlot": {
+                "inst": 2,
+                "slot": 1
+              }
+            },
+            "to": [
+              11,
+              6
+            ]
+          }
+        },
+        {
+          "activity": {
+            "Using": {
+              "inst": 4,
+              "slot": 0
+            }
+          },
+          "adv": {
+            "aptitude": [
+              138,
+              61,
+              139,
+              65
+            ],
+            "aspiration": null,
+            "class": 2,
+            "equipment": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "gold_earned": 18,
+            "quests_at_rank": 1,
+            "quests_failed": 0,
+            "quests_succeeded": 1,
+            "rested_until": 868,
+            "skill_xp": [
+              384,
+              384,
+              6,
+              12,
+              0,
+              0,
+              6,
+              0
+            ],
+            "xp": 20
+          },
+          "attrs": [
+            12,
+            6,
+            18,
+            14,
+            17,
+            9
+          ],
+          "cell": [
+            20,
+            6
+          ],
+          "family": 3,
+          "given": 9,
+          "hired_minute": 480,
+          "hunger": 0,
+          "id": 1,
+          "injured_until": -1,
+          "quest": null,
+          "rank": 0,
+          "serial": 413,
+          "staff": null,
+          "state": "Interact",
+          "state_entered": 3960,
+          "walk": null
+        },
+        {
+          "activity": {
+            "Using": {
+              "inst": 2,
+              "slot": 0
+            }
+          },
+          "adv": {
+            "aptitude": [
+              134,
+              93,
+              117,
+              52
+            ],
+            "aspiration": null,
+            "class": 0,
+            "equipment": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "gold_earned": 87,
+            "quests_at_rank": 4,
+            "quests_failed": 0,
+            "quests_succeeded": 4,
+            "rested_until": 3279,
+            "skill_xp": [
+              189,
+              228,
+              49,
+              31,
+              0,
+              33,
+              20,
+              30
+            ],
+            "xp": 90
+          },
+          "attrs": [
+            3,
+            6,
+            12,
+            10,
+            20,
+            19
+          ],
+          "cell": [
+            10,
+            6
+          ],
+          "family": 6,
+          "given": 15,
+          "hired_minute": 480,
+          "hunger": 0,
+          "id": 2,
+          "injured_until": -1,
+          "quest": null,
+          "rank": 0,
+          "serial": 317,
+          "staff": null,
+          "state": "Interact",
+          "state_entered": 3951,
+          "walk": null
+        },
+        {
+          "activity": "None",
+          "adv": {
+            "aptitude": [
+              65,
+              79,
+              75,
+              50
+            ],
+            "aspiration": null,
+            "class": 1,
+            "equipment": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "gold_earned": 333,
+            "quests_at_rank": 3,
+            "quests_failed": 0,
+            "quests_succeeded": 4,
+            "rested_until": 3908,
+            "skill_xp": [
+              27,
+              45,
+              52,
+              31,
+              14,
+              42,
+              20,
+              35
+            ],
+            "xp": 220
+          },
+          "attrs": [
+            5,
+            20,
+            22,
+            11,
+            8,
+            15
+          ],
+          "cell": [
+            1,
+            13
+          ],
+          "family": 14,
+          "given": 11,
+          "hired_minute": 480,
+          "hunger": 40,
+          "id": 3,
+          "injured_until": -1,
+          "quest": 11,
+          "rank": 1,
+          "serial": 187,
+          "staff": null,
+          "state": {
+            "OffMap": "Quest"
+          },
+          "state_entered": 3905,
+          "walk": null
+        },
+        {
+          "activity": "None",
+          "adv": null,
+          "attrs": [
+            8,
+            15,
+            4,
+            20,
+            3,
+            9
+          ],
+          "cell": [
+            1,
+            13
+          ],
+          "family": 7,
+          "given": 9,
+          "hired_minute": 480,
+          "hunger": 80,
+          "id": 4,
+          "injured_until": -1,
+          "quest": null,
+          "rank": 0,
+          "serial": 15,
+          "staff": {
+            "happiness": 70,
+            "low_hours": 0,
+            "role": 0,
+            "shift": {
+              "length": 8,
+              "start_hour": 8
+            },
+            "unpaid_since": -1,
+            "wages_paid": 32,
+            "workstation": null
+          },
+          "state": {
+            "OffMap": "OffShift"
+          },
+          "state_entered": 3844,
+          "walk": null
+        }
+      ]
+    },
+    "clock": {
+      "version": 1,
+      "data": {
+        "minute": 3960
+      }
+    },
+    "guild": {
+      "version": 1,
+      "data": {
+        "gold": 740,
+        "last_change": 95,
+        "last_reason": "QuestReward",
+        "renown": 13,
+        "renown_tier": 0,
+        "stash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "meta": {
+      "version": 1,
+      "data": {
+        "content_fingerprint": 13884116826868658696
+      }
+    },
+    "objectives": {
+      "version": 1,
+      "data": {
+        "done": [
+          "WatchReturn"
+        ]
+      }
+    },
+    "quests": {
+      "version": 1,
+      "data": [
+        {
+          "departed": 508,
+          "due_back": 688,
+          "expires": 4801,
+          "gold": [
+            15,
+            25
+          ],
+          "gold_won": 18,
+          "id": 0,
+          "injury_minutes": 360,
+          "legs": [
+            {
+              "attr": "presence",
+              "kind": "objective",
+              "minutes": 90,
+              "target": 8
+            },
+            {
+              "attr": "agility",
+              "kind": "return",
+              "minutes": 90,
+              "target": 4
+            }
+          ],
+          "loot": [
+            [
+              6,
+              15
+            ]
+          ],
+          "loot_won": [],
+          "posted": 481,
+          "rank": 0,
+          "report": [
+            {
+              "attr_value": 17,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 16,
+              "target": 8
+            },
+            {
+              "attr_value": 12,
+              "consequence": "None",
+              "food": 1,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 5,
+              "target": 4
+            }
+          ],
+          "resolved_at": 688,
+          "source": {
+            "Curated": {
+              "template": 2
+            }
+          },
+          "status": {
+            "Resolved": "Succeeded"
+          },
+          "taker": 1,
+          "xp": 20
+        },
+        {
+          "departed": 791,
+          "due_back": 1091,
+          "expires": 5101,
+          "gold": [
+            20,
+            40
+          ],
+          "gold_won": 38,
+          "id": 1,
+          "injury_minutes": 480,
+          "legs": [
+            {
+              "attr": "vitality",
+              "kind": "travel",
+              "minutes": 90,
+              "target": 6
+            },
+            {
+              "attr": "might",
+              "kind": "objective",
+              "minutes": 120,
+              "target": 9
+            },
+            {
+              "attr": "perception",
+              "kind": "return",
+              "minutes": 90,
+              "target": 5
+            }
+          ],
+          "loot": [
+            [
+              6,
+              25
+            ]
+          ],
+          "loot_won": [
+            6
+          ],
+          "posted": 781,
+          "rank": 0,
+          "report": [
+            {
+              "attr_value": 19,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 17,
+              "target": 6
+            },
+            {
+              "attr_value": 12,
+              "consequence": "None",
+              "food": 0,
+              "gear": 1,
+              "passed": true,
+              "resolved": true,
+              "roll": 7,
+              "target": 9
+            },
+            {
+              "attr_value": 10,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 19,
+              "target": 5
+            }
+          ],
+          "resolved_at": 1091,
+          "source": {
+            "Curated": {
+              "template": 0
+            }
+          },
+          "status": {
+            "Resolved": "Succeeded"
+          },
+          "taker": 2,
+          "xp": 30
+        },
+        {
+          "departed": 1111,
+          "due_back": 1621,
+          "expires": 5401,
+          "gold": [
+            15,
+            45
+          ],
+          "gold_won": 35,
+          "id": 2,
+          "injury_minutes": 480,
+          "legs": [
+            {
+              "attr": "vitality",
+              "kind": "travel",
+              "minutes": 150,
+              "target": 5
+            },
+            {
+              "attr": "perception",
+              "kind": "encounter",
+              "minutes": 120,
+              "target": 8
+            },
+            {
+              "attr": "arcana",
+              "kind": "objective",
+              "minutes": 150,
+              "target": 9
+            },
+            {
+              "attr": "perception",
+              "kind": "return",
+              "minutes": 90,
+              "target": 5
+            }
+          ],
+          "loot": [
+            [
+              7,
+              12
+            ]
+          ],
+          "loot_won": [],
+          "posted": 1081,
+          "rank": 0,
+          "report": [
+            {
+              "attr_value": 15,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 9,
+              "target": 5
+            },
+            {
+              "attr_value": 11,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 3,
+              "target": 8
+            },
+            {
+              "attr_value": 20,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 11,
+              "target": 9
+            },
+            {
+              "attr_value": 11,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 6,
+              "target": 5
+            }
+          ],
+          "resolved_at": 1621,
+          "source": {
+            "Procedural": {
+              "category": 3,
+              "location": 3,
+              "target": 2
+            }
+          },
+          "status": {
+            "Resolved": "Succeeded"
+          },
+          "taker": 3,
+          "xp": 25
+        },
+        {
+          "departed": 1846,
+          "due_back": 2476,
+          "expires": 5701,
+          "gold": [
+            90,
+            150
+          ],
+          "gold_won": 105,
+          "id": 3,
+          "injury_minutes": 720,
+          "legs": [
+            {
+              "attr": "vitality",
+              "kind": "travel",
+              "minutes": 150,
+              "target": 12
+            },
+            {
+              "attr": "perception",
+              "kind": "encounter",
+              "minutes": 150,
+              "target": 13
+            },
+            {
+              "attr": "arcana",
+              "kind": "objective",
+              "minutes": 180,
+              "target": 15
+            },
+            {
+              "attr": "agility",
+              "kind": "return",
+              "minutes": 150,
+              "target": 11
+            }
+          ],
+          "loot": [
+            [
+              1,
+              15
+            ],
+            [
+              9,
+              10
+            ]
+          ],
+          "loot_won": [],
+          "posted": 1381,
+          "rank": 1,
+          "report": [
+            {
+              "attr_value": 15,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 4,
+              "target": 12
+            },
+            {
+              "attr_value": 11,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 15,
+              "target": 13
+            },
+            {
+              "attr_value": 20,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 4,
+              "target": 15
+            },
+            {
+              "attr_value": 5,
+              "consequence": "None",
+              "food": 0,
+              "gear": 1,
+              "passed": true,
+              "resolved": true,
+              "roll": 19,
+              "target": 11
+            }
+          ],
+          "resolved_at": 2476,
+          "source": {
+            "Curated": {
+              "template": 8
+            }
+          },
+          "status": {
+            "Resolved": "Succeeded"
+          },
+          "taker": 3,
+          "xp": 90
+        },
+        {
+          "departed": 1700,
+          "due_back": 2000,
+          "expires": 6001,
+          "gold": [
+            20,
+            40
+          ],
+          "gold_won": 34,
+          "id": 4,
+          "injury_minutes": 480,
+          "legs": [
+            {
+              "attr": "vitality",
+              "kind": "travel",
+              "minutes": 90,
+              "target": 6
+            },
+            {
+              "attr": "might",
+              "kind": "objective",
+              "minutes": 120,
+              "target": 9
+            },
+            {
+              "attr": "perception",
+              "kind": "return",
+              "minutes": 90,
+              "target": 5
+            }
+          ],
+          "loot": [
+            [
+              6,
+              25
+            ]
+          ],
+          "loot_won": [],
+          "posted": 1681,
+          "rank": 0,
+          "report": [
+            {
+              "attr_value": 20,
+              "consequence": "None",
+              "food": -2,
+              "gear": 1,
+              "passed": true,
+              "resolved": true,
+              "roll": 4,
+              "target": 6
+            },
+            {
+              "attr_value": 15,
+              "consequence": "None",
+              "food": -2,
+              "gear": 1,
+              "passed": true,
+              "resolved": true,
+              "roll": 17,
+              "target": 9
+            },
+            {
+              "attr_value": 18,
+              "consequence": "None",
+              "food": -2,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 9,
+              "target": 5
+            }
+          ],
+          "resolved_at": 2000,
+          "source": {
+            "Curated": {
+              "template": 0
+            }
+          },
+          "status": {
+            "Resolved": "Succeeded"
+          },
+          "taker": 0,
+          "xp": 30
+        },
+        {
+          "departed": 2016,
+          "due_back": 2196,
+          "expires": 6301,
+          "gold": [
+            15,
+            25
+          ],
+          "gold_won": 16,
+          "id": 5,
+          "injury_minutes": 360,
+          "legs": [
+            {
+              "attr": "presence",
+              "kind": "objective",
+              "minutes": 90,
+              "target": 8
+            },
+            {
+              "attr": "agility",
+              "kind": "return",
+              "minutes": 90,
+              "target": 4
+            }
+          ],
+          "loot": [
+            [
+              6,
+              15
+            ]
+          ],
+          "loot_won": [],
+          "posted": 1981,
+          "rank": 0,
+          "report": [
+            {
+              "attr_value": 20,
+              "consequence": "None",
+              "food": -2,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 9,
+              "target": 8
+            },
+            {
+              "attr_value": 3,
+              "consequence": "None",
+              "food": -2,
+              "gear": 0,
+              "passed": false,
+              "resolved": true,
+              "roll": 2,
+              "target": 4
+            }
+          ],
+          "resolved_at": 2196,
+          "source": {
+            "Curated": {
+              "template": 2
+            }
+          },
+          "status": {
+            "Resolved": "Succeeded"
+          },
+          "taker": 2,
+          "xp": 20
+        },
+        {
+          "departed": 2550,
+          "due_back": 2880,
+          "expires": 6601,
+          "gold": [
+            45,
+            100
+          ],
+          "gold_won": 98,
+          "id": 6,
+          "injury_minutes": 600,
+          "legs": [
+            {
+              "attr": "agility",
+              "kind": "travel",
+              "minutes": 90,
+              "target": 10
+            },
+            {
+              "attr": "perception",
+              "kind": "objective",
+              "minutes": 90,
+              "target": 13
+            },
+            {
+              "attr": "agility",
+              "kind": "return",
+              "minutes": 150,
+              "target": 10
+            }
+          ],
+          "loot": [
+            [
+              2,
+              12
+            ]
+          ],
+          "loot_won": [],
+          "posted": 2281,
+          "rank": 1,
+          "report": [
+            {
+              "attr_value": 5,
+              "consequence": "None",
+              "food": 0,
+              "gear": 1,
+              "passed": true,
+              "resolved": true,
+              "roll": 4,
+              "target": 10
+            },
+            {
+              "attr_value": 11,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 17,
+              "target": 13
+            },
+            {
+              "attr_value": 5,
+              "consequence": "None",
+              "food": 0,
+              "gear": 1,
+              "passed": false,
+              "resolved": true,
+              "roll": 1,
+              "target": 10
+            }
+          ],
+          "resolved_at": 2880,
+          "source": {
+            "Procedural": {
+              "category": 4,
+              "location": 5,
+              "target": 0
+            }
+          },
+          "status": {
+            "Resolved": "Succeeded"
+          },
+          "taker": 3,
+          "xp": 50
+        },
+        {
+          "departed": 2590,
+          "due_back": 2800,
+          "expires": 6901,
+          "gold": [
+            15,
+            30
+          ],
+          "gold_won": 18,
+          "id": 7,
+          "injury_minutes": 720,
+          "legs": [
+            {
+              "attr": "agility",
+              "kind": "travel",
+              "minutes": 60,
+              "target": 6
+            },
+            {
+              "attr": "perception",
+              "kind": "objective",
+              "minutes": 90,
+              "target": 9
+            },
+            {
+              "attr": "vitality",
+              "kind": "return",
+              "minutes": 60,
+              "target": 5
+            }
+          ],
+          "loot": [
+            [
+              7,
+              10
+            ]
+          ],
+          "loot_won": [],
+          "posted": 2581,
+          "rank": 0,
+          "report": [
+            {
+              "attr_value": 3,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 17,
+              "target": 6
+            },
+            {
+              "attr_value": 10,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 17,
+              "target": 9
+            },
+            {
+              "attr_value": 19,
+              "consequence": "None",
+              "food": 0,
+              "gear": 1,
+              "passed": true,
+              "resolved": true,
+              "roll": 7,
+              "target": 5
+            }
+          ],
+          "resolved_at": 2800,
+          "source": {
+            "Curated": {
+              "template": 4
+            }
+          },
+          "status": {
+            "Resolved": "Succeeded"
+          },
+          "taker": 2,
+          "xp": 20
+        },
+        {
+          "departed": 2889,
+          "due_back": 3099,
+          "expires": 7201,
+          "gold": [
+            15,
+            30
+          ],
+          "gold_won": 15,
+          "id": 8,
+          "injury_minutes": 720,
+          "legs": [
+            {
+              "attr": "agility",
+              "kind": "travel",
+              "minutes": 60,
+              "target": 6
+            },
+            {
+              "attr": "perception",
+              "kind": "objective",
+              "minutes": 90,
+              "target": 9
+            },
+            {
+              "attr": "vitality",
+              "kind": "return",
+              "minutes": 60,
+              "target": 5
+            }
+          ],
+          "loot": [
+            [
+              7,
+              10
+            ]
+          ],
+          "loot_won": [],
+          "posted": 2881,
+          "rank": 0,
+          "report": [
+            {
+              "attr_value": 3,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 8,
+              "target": 6
+            },
+            {
+              "attr_value": 10,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 8,
+              "target": 9
+            },
+            {
+              "attr_value": 19,
+              "consequence": "None",
+              "food": 0,
+              "gear": 1,
+              "passed": true,
+              "resolved": true,
+              "roll": 18,
+              "target": 5
+            }
+          ],
+          "resolved_at": 3099,
+          "source": {
+            "Curated": {
+              "template": 4
+            }
+          },
+          "status": {
+            "Resolved": "Succeeded"
+          },
+          "taker": 2,
+          "xp": 20
+        },
+        {
+          "departed": 3248,
+          "due_back": 3728,
+          "expires": 7501,
+          "gold": [
+            60,
+            100
+          ],
+          "gold_won": 95,
+          "id": 9,
+          "injury_minutes": 720,
+          "legs": [
+            {
+              "attr": "vitality",
+              "kind": "travel",
+              "minutes": 120,
+              "target": 11
+            },
+            {
+              "attr": "might",
+              "kind": "encounter",
+              "minutes": 120,
+              "target": 12
+            },
+            {
+              "attr": "presence",
+              "kind": "objective",
+              "minutes": 120,
+              "target": 14
+            },
+            {
+              "attr": "agility",
+              "kind": "return",
+              "minutes": 120,
+              "target": 10
+            }
+          ],
+          "loot": [
+            [
+              10,
+              15
+            ]
+          ],
+          "loot_won": [],
+          "posted": 3181,
+          "rank": 1,
+          "report": [
+            {
+              "attr_value": 15,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 13,
+              "target": 11
+            },
+            {
+              "attr_value": 22,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 20,
+              "target": 12
+            },
+            {
+              "attr_value": 8,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": true,
+              "roll": 14,
+              "target": 14
+            },
+            {
+              "attr_value": 5,
+              "consequence": "None",
+              "food": 0,
+              "gear": 1,
+              "passed": true,
+              "resolved": true,
+              "roll": 19,
+              "target": 10
+            }
+          ],
+          "resolved_at": 3728,
+          "source": {
+            "Curated": {
+              "template": 10
+            }
+          },
+          "status": {
+            "Resolved": "Succeeded"
+          },
+          "taker": 3,
+          "xp": 55
+        },
+        {
+          "departed": -1,
+          "due_back": -1,
+          "expires": 7801,
+          "gold": [
+            45,
+            100
+          ],
+          "gold_won": 0,
+          "id": 10,
+          "injury_minutes": 600,
+          "legs": [
+            {
+              "attr": "vitality",
+              "kind": "travel",
+              "minutes": 60,
+              "target": 11
+            },
+            {
+              "attr": "presence",
+              "kind": "objective",
+              "minutes": 150,
+              "target": 14
+            },
+            {
+              "attr": "agility",
+              "kind": "return",
+              "minutes": 150,
+              "target": 9
+            }
+          ],
+          "loot": [
+            [
+              10,
+              12
+            ]
+          ],
+          "loot_won": [],
+          "posted": 3481,
+          "rank": 1,
+          "report": [],
+          "resolved_at": -1,
+          "source": {
+            "Procedural": {
+              "category": 1,
+              "location": 2,
+              "target": 2
+            }
+          },
+          "status": "Posted",
+          "taker": null,
+          "xp": 50
+        },
+        {
+          "departed": 3905,
+          "due_back": 4235,
+          "expires": 8101,
+          "gold": [
+            45,
+            100
+          ],
+          "gold_won": 95,
+          "id": 11,
+          "injury_minutes": 600,
+          "legs": [
+            {
+              "attr": "vitality",
+              "kind": "travel",
+              "minutes": 90,
+              "target": 10
+            },
+            {
+              "attr": "perception",
+              "kind": "encounter",
+              "minutes": 90,
+              "target": 12
+            },
+            {
+              "attr": "might",
+              "kind": "objective",
+              "minutes": 90,
+              "target": 14
+            },
+            {
+              "attr": "agility",
+              "kind": "return",
+              "minutes": 60,
+              "target": 10
+            }
+          ],
+          "loot": [
+            [
+              8,
+              12
+            ]
+          ],
+          "loot_won": [],
+          "posted": 3781,
+          "rank": 1,
+          "report": [
+            {
+              "attr_value": 15,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": false,
+              "roll": 11,
+              "target": 10
+            },
+            {
+              "attr_value": 11,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": false,
+              "roll": 11,
+              "target": 12
+            },
+            {
+              "attr_value": 22,
+              "consequence": "None",
+              "food": 0,
+              "gear": 0,
+              "passed": true,
+              "resolved": false,
+              "roll": 17,
+              "target": 14
+            },
+            {
+              "attr_value": 5,
+              "consequence": "None",
+              "food": 0,
+              "gear": 1,
+              "passed": true,
+              "resolved": false,
+              "roll": 8,
+              "target": 10
+            }
+          ],
+          "resolved_at": -1,
+          "source": {
+            "Procedural": {
+              "category": 0,
+              "location": 2,
+              "target": 2
+            }
+          },
+          "status": "Underway",
+          "taker": 3,
+          "xp": 50
+        }
+      ]
+    },
+    "rng": {
+      "version": 1,
+      "data": {
+        "root_seed": 2024,
+        "streams": [
+          {
+            "s": [
+              170252863024253048,
+              13283612315985890752,
+              15555261812698250796,
+              13543150417582378037
+            ]
+          },
+          {
+            "s": [
+              7548067930921006265,
+              6668464665619011066,
+              18295001469462969646,
+              2990052346056601817
+            ]
+          },
+          {
+            "s": [
+              10837378548631708462,
+              10187306658544696869,
+              953246713732420955,
+              1636041794198475091
+            ]
+          },
+          {
+            "s": [
+              11938596746597416956,
+              17889169836588681997,
+              14669288166630442597,
+              9914668261436933656
+            ]
+          },
+          {
+            "s": [
+              1705651641521336340,
+              12277791134162589651,
+              15356460571999738613,
+              3646997198665974577
+            ]
+          },
+          {
+            "s": [
+              8575994030054899073,
+              8084115851789693503,
+              17112292134800296010,
+              17710536257656020328
+            ]
+          }
+        ]
+      }
+    },
+    "scheduler": {
+      "version": 1,
+      "data": {
+        "buckets": {
+          "3961": [
+            {
+              "handler": "Arrival",
+              "payload": 1769526525952
+            }
+          ],
+          "3963": [
+            {
+              "handler": "InteractionEnd",
+              "payload": 1361504632834
+            }
+          ],
+          "3990": [
+            {
+              "handler": "InteractionEnd",
+              "payload": 1773821493249
+            }
+          ],
+          "3995": [
+            {
+              "handler": "QuestLeg",
+              "payload": 11
+            }
+          ],
+          "4081": [
+            {
+              "handler": "QuestGeneration",
+              "payload": 0
+            }
+          ],
+          "4085": [
+            {
+              "handler": "QuestLeg",
+              "payload": 4294967307
+            }
+          ],
+          "4152": [
+            {
+              "handler": "CandidateExpiry",
+              "payload": 4
+            }
+          ],
+          "4175": [
+            {
+              "handler": "QuestLeg",
+              "payload": 8589934603
+            }
+          ],
+          "4235": [
+            {
+              "handler": "QuestLeg",
+              "payload": 12884901899
+            }
+          ],
+          "4499": [
+            {
+              "handler": "CandidateArrival",
+              "payload": 0
+            }
+          ],
+          "4539": [
+            {
+              "handler": "PromotionExpiry",
+              "payload": 2
+            }
+          ],
+          "4801": [
+            {
+              "handler": "QuestExpiry",
+              "payload": 0
+            }
+          ],
+          "4869": [
+            {
+              "handler": "CandidateExpiry",
+              "payload": 5
+            }
+          ],
+          "5101": [
+            {
+              "handler": "QuestExpiry",
+              "payload": 1
+            }
+          ],
+          "5401": [
+            {
+              "handler": "QuestExpiry",
+              "payload": 2
+            }
+          ],
+          "5701": [
+            {
+              "handler": "QuestExpiry",
+              "payload": 3
+            }
+          ],
+          "6001": [
+            {
+              "handler": "QuestExpiry",
+              "payload": 4
+            }
+          ],
+          "6301": [
+            {
+              "handler": "QuestExpiry",
+              "payload": 5
+            }
+          ],
+          "6601": [
+            {
+              "handler": "QuestExpiry",
+              "payload": 6
+            }
+          ],
+          "6901": [
+            {
+              "handler": "QuestExpiry",
+              "payload": 7
+            }
+          ],
+          "7201": [
+            {
+              "handler": "QuestExpiry",
+              "payload": 8
+            }
+          ],
+          "7501": [
+            {
+              "handler": "QuestExpiry",
+              "payload": 9
+            }
+          ],
+          "7801": [
+            {
+              "handler": "QuestExpiry",
+              "payload": 10
+            }
+          ],
+          "8101": [
+            {
+              "handler": "QuestExpiry",
+              "payload": 11
+            }
+          ]
+        }
+      }
+    },
+    "stats": {
+      "version": 1,
+      "data": {
+        "built": 0,
+        "candidates_arrived": 5,
+        "demolished": 0,
+        "died": 0,
+        "expired": 0,
+        "failed": 0,
+        "gold_earned": 472,
+        "gold_spent": 32,
+        "hires": 0,
+        "max_gold": 740,
+        "meals": 0,
+        "posted": 12,
+        "promotions": 0,
+        "quits": 0,
+        "stale_events": 0,
+        "succeeded": 10,
+        "taken": 11
+      }
+    },
+    "world": {
+      "version": 1,
+      "data": {
+        "audit": {
+          "arrivals": 438,
+          "cancellations": 0,
+          "releases": 436,
+          "reserves": 439
+        },
+        "east_wing_open": false,
+        "instances": [
+          {
+            "id": 0,
+            "origin": [
+              4,
+              10
+            ],
+            "paid": 150,
+            "prefab": 0,
+            "slots": [
+              {
+                "cell": [
+                  4,
+                  9
+                ],
+                "holder": null,
+                "occupied": false,
+                "staff": true
+              }
+            ],
+            "status": "Ready"
+          },
+          {
+            "id": 1,
+            "origin": [
+              6,
+              20
+            ],
+            "paid": 80,
+            "prefab": 1,
+            "slots": [
+              {
+                "cell": [
+                  6,
+                  21
+                ],
+                "holder": null,
+                "occupied": false,
+                "staff": false
+              },
+              {
+                "cell": [
+                  7,
+                  21
+                ],
+                "holder": null,
+                "occupied": false,
+                "staff": false
+              }
+            ],
+            "status": "Ready"
+          },
+          {
+            "id": 2,
+            "origin": [
+              10,
+              5
+            ],
+            "paid": 25,
+            "prefab": 2,
+            "slots": [
+              {
+                "cell": [
+                  10,
+                  6
+                ],
+                "holder": 2,
+                "occupied": true,
+                "staff": false
+              },
+              {
+                "cell": [
+                  11,
+                  6
+                ],
+                "holder": 0,
+                "occupied": false,
+                "staff": false
+              }
+            ],
+            "status": "Ready"
+          },
+          {
+            "id": 3,
+            "origin": [
+              10,
+              14
+            ],
+            "paid": 25,
+            "prefab": 2,
+            "slots": [
+              {
+                "cell": [
+                  10,
+                  15
+                ],
+                "holder": null,
+                "occupied": false,
+                "staff": false
+              },
+              {
+                "cell": [
+                  11,
+                  15
+                ],
+                "holder": null,
+                "occupied": false,
+                "staff": false
+              }
+            ],
+            "status": "Ready"
+          },
+          {
+            "id": 4,
+            "origin": [
+              20,
+              5
+            ],
+            "paid": 60,
+            "prefab": 4,
+            "slots": [
+              {
+                "cell": [
+                  20,
+                  6
+                ],
+                "holder": 1,
+                "occupied": true,
+                "staff": false
+              }
+            ],
+            "status": "Ready"
+          },
+          {
+            "id": 5,
+            "origin": [
+              22,
+              22
+            ],
+            "paid": 40,
+            "prefab": 3,
+            "slots": [
+              {
+                "cell": [
+                  22,
+                  23
+                ],
+                "holder": null,
+                "occupied": false,
+                "staff": false
+              }
+            ],
+            "status": "Ready"
+          }
+        ]
+      }
+    }
+  }
+}

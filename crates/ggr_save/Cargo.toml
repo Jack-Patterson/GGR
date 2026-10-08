@@ -1,0 +1,13 @@
+[package]
+name = "ggr_save"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Persistence: the versioned envelope, atomic writes with rolling backups, migrations."
+
+[dependencies]
+ggr_core.workspace = true
+ggr_content.workspace = true
+ggr_sim.workspace = true
+serde.workspace = true
+serde_json.workspace = true

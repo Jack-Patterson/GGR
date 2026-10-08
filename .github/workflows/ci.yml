@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  sim:
+    name: Sim, save and smoke (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - name: Format
+        run: cargo fmt --all --check
+      - name: Clippy (engine-free crates)
+        run: cargo clippy -p ggr_core -p ggr_content -p ggr_sim -p ggr_save -p ggr_smoke --all-targets -- -D warnings
+      - name: Test
+        run: cargo test -p ggr_core -p ggr_content -p ggr_sim -p ggr_save -p ggr_smoke
+      - name: Smoke (7 days, seed 42, balance harness)
+        run: cargo run --release -p ggr_smoke -- --days 7 --seed 42 --balance 10000
+
+  game:
+    name: Game build (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+      - uses: Swatinem/rust-cache@v2
+      - name: Linux dependencies
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libasound2-dev libudev-dev libwayland-dev libxkbcommon-dev
+      - name: Clippy
+        run: cargo clippy -p ggr_game --all-targets -- -D warnings
+      - name: Test (localisation key scan)
+        run: cargo test -p ggr_game
+      - name: Release build
+        run: cargo build --release -p ggr_game

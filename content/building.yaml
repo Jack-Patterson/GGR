@@ -1,0 +1,65 @@
+# The build palette and the hall. A prefab is a footprint of blocked cells plus the cells people
+# stand on to use it (slots), both as offsets from the prefab's origin. Slots must sit outside
+# every footprint; placement validates that, and that the door still reaches every slot.
+
+prefabs:
+  - { id: prefab.guild_desk, name_key: prefab.guild_desk, desc_key: prefab.guild_desk.desc, kind: desk,
+      footprint: [[0, 0], [1, 0]], staff_slot: [0, -1], slots: [], minutes: 0,
+      cost: 150, build_minutes: 180, renown_tier: 0, height: 1.0 }
+  - { id: prefab.quest_board, name_key: prefab.quest_board, desc_key: prefab.quest_board.desc, kind: board,
+      footprint: [[0, 0], [1, 0]], slots: [[0, 1], [1, 1]], minutes: 10,
+      cost: 80, build_minutes: 90, renown_tier: 0, height: 2.0 }
+  - { id: prefab.bench, name_key: prefab.bench, desc_key: prefab.bench.desc, kind: rest,
+      footprint: [[0, 0], [1, 0]], slots: [[0, 1], [1, 1]], minutes: 12,
+      cost: 25, build_minutes: 45, renown_tier: 0, height: 0.5 }
+  - { id: prefab.well, name_key: prefab.well, desc_key: prefab.well.desc, kind: rest,
+      footprint: [[0, 0]], slots: [[0, 1]], minutes: 5,
+      cost: 40, build_minutes: 60, renown_tier: 0, height: 0.8 }
+  - { id: prefab.dummy_melee, name_key: prefab.dummy_melee, desc_key: prefab.dummy_melee.desc, kind: training,
+      skills: [skill.blade, skill.defense], footprint: [[0, 0]], slots: [[0, 1]], minutes: 30,
+      cost: 60, build_minutes: 60, renown_tier: 0, height: 1.6 }
+  - { id: prefab.target_archery, name_key: prefab.target_archery, desc_key: prefab.target_archery.desc, kind: training,
+      skills: [skill.marksman, skill.subterfuge], footprint: [[0, 0]], slots: [[0, 2]], minutes: 30,
+      cost: 60, build_minutes: 60, renown_tier: 0, height: 1.4 }
+  - { id: prefab.focus_arcane, name_key: prefab.focus_arcane, desc_key: prefab.focus_arcane.desc, kind: training,
+      skills: [skill.elemental, skill.lore], footprint: [[0, 0]], slots: [[0, 1]], minutes: 30,
+      cost: 80, build_minutes: 90, renown_tier: 1, height: 1.2 }
+  - { id: prefab.prayer_altar, name_key: prefab.prayer_altar, desc_key: prefab.prayer_altar.desc, kind: training,
+      skills: [skill.restoration, skill.nature], footprint: [[0, 0]], slots: [[0, 1]], minutes: 30,
+      cost: 80, build_minutes: 90, renown_tier: 1, height: 1.1 }
+  - { id: prefab.canteen, name_key: prefab.canteen, desc_key: prefab.canteen.desc, kind: canteen,
+      footprint: [[0, 0], [1, 0], [2, 0]], staff_slot: [1, -1], slots: [[0, 1], [1, 1], [2, 1]], minutes: 20,
+      cost: 180, build_minutes: 240, renown_tier: 0, height: 1.0 }
+  - { id: prefab.infirmary, name_key: prefab.infirmary, desc_key: prefab.infirmary.desc, kind: infirmary,
+      footprint: [[0, 0], [1, 0]], staff_slot: [2, 0], slots: [[0, 1], [1, 1]], minutes: 120,
+      cost: 200, build_minutes: 240, renown_tier: 1, height: 0.6 }
+  - { id: prefab.banner, name_key: prefab.banner, desc_key: prefab.banner.desc, kind: decor,
+      footprint: [[0, 0]], slots: [], minutes: 0,
+      cost: 20, build_minutes: 30, renown_tier: 0, height: 2.4 }
+  - { id: prefab.planter, name_key: prefab.planter, desc_key: prefab.planter.desc, kind: decor,
+      footprint: [[0, 0]], slots: [], minutes: 0,
+      cost: 12, build_minutes: 20, renown_tier: 0, height: 0.9 }
+
+# The hall: a main room with a door on the west wall, a partitioned back room, and an East Wing
+# walled off until the guild buys it. Blocked rectangles, not cell lists.
+layout:
+  width: 40
+  height: 28
+  door: [1, 13]
+  blocked:
+    - [0, 0, 40, 1]      # x, y, width, height
+    - [0, 27, 40, 1]
+    - [0, 0, 1, 28]
+    - [39, 0, 1, 28]
+    - [14, 17, 9, 1]     # the back-room partition, open at its east end
+  east_wing:
+    wall: [27, 1, 1, 26]
+    openings: [[27, 6, 1, 3], [27, 19, 1, 3]]
+    region: [28, 1, 11, 26]
+  placements:
+    - { prefab: prefab.guild_desk,  at: [4, 10] }
+    - { prefab: prefab.quest_board, at: [6, 20] }
+    - { prefab: prefab.bench,       at: [10, 5] }
+    - { prefab: prefab.bench,       at: [10, 14] }
+    - { prefab: prefab.dummy_melee, at: [20, 5] }
+    - { prefab: prefab.well,        at: [22, 22] }

@@ -1,0 +1,244 @@
+# English. Every user-facing string in the game is a key in this file. Voice (from V2's
+# DESIGN.md): plain and terse; never name the machinery; never weld a number into a sentence
+# where a label will do.
+language: English
+strings:
+  # Attributes
+  attr.agility: Agility
+  attr.arcana: Arcana
+  attr.might: Might
+  attr.perception: Perception
+  attr.presence: Presence
+  attr.vitality: Vitality
+  attr.agility.short: AGI
+  attr.arcana.short: ARC
+  attr.might.short: MIG
+  attr.perception.short: PER
+  attr.presence.short: PRE
+  attr.vitality.short: VIT
+
+  # Staff roles
+  role.clerk: Clerk
+  role.cook: Cook
+  role.medic: Medic
+  role.adventurer: Adventurer
+
+  # Branches, skills, classes
+  branch.fighter: Fighter
+  branch.rogue: Rogue
+  branch.mage: Mage
+  branch.holy: Holy
+  skill.blade: Blade
+  skill.defense: Defence
+  skill.marksman: Marksmanship
+  skill.subterfuge: Subterfuge
+  skill.elemental: Elemental Magic
+  skill.lore: Arcane Lore
+  skill.restoration: Restoration
+  skill.nature: Nature Lore
+  class.fighter: Fighter
+  class.fighter.desc: Hits things until they stop. A solid foundation.
+  class.rogue: Rogue
+  class.rogue.desc: Quick hands, quicker feet.
+  class.mage: Mage
+  class.mage.desc: Reads the books other people are afraid of.
+  class.holy: Acolyte
+  class.holy.desc: Keeps people alive, and occasionally convinced.
+  class.swordsman: Swordsman
+  class.swordsman.desc: The blade as a discipline rather than a habit.
+  class.guardian: Guardian
+  class.guardian.desc: Stands between the party and whatever wants it dead.
+  class.ranger: Ranger
+  class.ranger.desc: Sees the ambush before the ambush sees them.
+  class.assassin: Assassin
+  class.assassin.desc: Finishes fights before the other side has started them.
+  class.elementalist: Elementalist
+  class.elementalist.desc: Fire, frost and a great deal of paperwork.
+  class.enchanter: Enchanter
+  class.enchanter.desc: Talks the world into behaving differently.
+  class.priest: Priest
+  class.priest.desc: Mends the wounded and steadies the frightened.
+  class.druid: Druid
+  class.druid.desc: Reads the wild the way a clerk reads a ledger.
+
+  # Items and slots
+  item.iron_greatsword: Iron Greatsword
+  item.ash_hunting_bow: Ash Hunting Bow
+  item.iron_shortsword: Iron Shortsword
+  item.copper_dagger: Copper Dagger
+  item.oak_staff: Oak Staff
+  item.oak_buckler: Oak Buckler
+  item.tallow_lantern: Tallow Lantern
+  item.prayer_beads: Prayer Beads
+  item.leather_cap: Leather Cap
+  item.iron_helm: Iron Helm
+  item.padded_jerkin: Padded Jerkin
+  item.travel_breeches: Travelling Breeches
+  slot.head: Head
+  slot.body: Body
+  slot.legs: Legs
+  slot.main_hand: Main hand
+  slot.off_hand: Off hand
+
+  # Prefabs
+  prefab.guild_desk: Guild Desk
+  prefab.guild_desk.desc: Where candidates are hired and promotions signed. Needs a clerk on shift.
+  prefab.quest_board: Quest Board
+  prefab.quest_board.desc: Adventurers read it and choose their own work.
+  prefab.bench: Bench
+  prefab.bench.desc: Somewhere to sit between jobs.
+  prefab.well: Well
+  prefab.well.desc: Fresh water and somewhere to loiter.
+  prefab.dummy_melee: Training Dummy
+  prefab.dummy_melee.desc: Trains Blade and Defence.
+  prefab.target_archery: Archery Target
+  prefab.target_archery.desc: Trains Marksmanship and Subterfuge.
+  prefab.focus_arcane: Arcane Focus
+  prefab.focus_arcane.desc: Trains Elemental Magic and Arcane Lore.
+  prefab.prayer_altar: Prayer Altar
+  prefab.prayer_altar.desc: Trains Restoration and Nature Lore.
+  prefab.canteen: Canteen
+  prefab.canteen.desc: Feeds hungry adventurers for a few coins. Needs a cook on shift.
+  prefab.infirmary: Infirmary
+  prefab.infirmary.desc: Injured adventurers recover here, much faster with a medic on shift.
+  prefab.banner: Guild Banner
+  prefab.banner.desc: Staff like working somewhere that looks cared for.
+  prefab.planter: Planter
+  prefab.planter.desc: A little green. Staff appreciate it.
+
+  # Curated quests
+  quest.rat_cellar: Clear the Rat Cellar
+  quest.rat_cellar.desc: The tavern's cellar has gone from "squeaking" to "scurrying". Someone should do something about that.
+  quest.lost_cat: Find the Miller's Cat
+  quest.lost_cat.desc: The miller's cat has been missing since Tuesday. It has, reportedly, opinions about being found.
+  quest.market_watch: Watch the Market Stalls
+  quest.market_watch.desc: A pickpocket has been working the market square. Somebody ought to stand around looking useful.
+  quest.bandit_toll: End the Bandit Toll
+  quest.bandit_toll.desc: Bandits have been taxing the trade road. The guild disagrees with their arithmetic.
+  quest.moonpetal: Gather Moonpetal
+  quest.moonpetal.desc: The apothecary needs moonpetal, which only opens at dusk and only in places nobody sensible goes at dusk.
+  quest.pilgrims: See the Pilgrims to Saint Aud's
+  quest.pilgrims.desc: A party of pilgrims wants an escort to the shrine, and someone to hear the same hymn nine times.
+  quest.goblin_camp: Break Up the Goblin Camp
+  quest.goblin_camp.desc: A goblin band has settled too close to the north road for anyone's comfort.
+  quest.smugglers_den: Raid the Smugglers' Den
+  quest.smugglers_den.desc: Contraband is moving through the old quarry again. The guild has been asked to make it stop moving.
+  quest.haunted_mill: Lay the Haunted Mill to Rest
+  quest.haunted_mill.desc: Something in the old mill has not been paying rent, and the miller wants it evicted.
+  quest.arcane_anomaly: Investigate the Arcane Anomaly
+  quest.arcane_anomaly.desc: Lights over the marsh, compasses spinning, and a goat that now speaks Old Imperial.
+  quest.salt_caravan: Escort the Salt Caravan
+  quest.salt_caravan.desc: The salt road is long, the caravan is slow, and the hills have opinions about both.
+  quest.flooded_tunnels: Scout the Flooded Tunnels
+  quest.flooded_tunnels.desc: The old drainage tunnels flooded in spring. Something has been living in them since.
+  quest.dragon_spur: Drive Off the Dragon Spur Wyrm
+  quest.dragon_spur.desc: A young wyrm has taken up residence on Dragon Spur ridge. This is a D-rank problem, and it knows it.
+  quest.bandit_camp: Clear the Bandit Camp
+  quest.bandit_camp.desc: The bandits who used to collect tolls have built a palisade. The guild takes this personally.
+  quest.ancient_ruins: Explore the Ancient Ruins
+  quest.ancient_ruins.desc: The ruins under Greyfen opened after the landslide. Scholars want maps. Scholars always want maps.
+
+  # Procedural quests: "{0} {1}" is verb then target; the description adds the place.
+  proc.title: "{0} {1}"
+  proc.desc: "{0} {1} {2}. Posted by a local who would rather not do it themselves."
+  proc.eliminate: Eliminate
+  proc.escort: Escort
+  proc.gather: Gather
+  proc.investigate: Investigate
+  proc.scout: Scout
+  target.bandits: the Bandits
+  target.wolves: the Wolf Pack
+  target.forest_spirits: the Forest Spirits
+  target.merchant: the Lost Merchant
+  target.caravan: the Caravan
+  target.scholar: the Visiting Scholar
+  target.herbs: Rare Herbs
+  target.mushrooms: Glowcap Mushrooms
+  target.ore: Silver Ore
+  target.ruins: the Old Ruins
+  target.lights: the Strange Lights
+  target.disappearances: the Disappearances
+  target.pass: the Mountain Pass
+  target.camp: the Raider Camp
+  target.ford: the River Ford
+  loc.river: near the river
+  loc.mines: in the old mines
+  loc.east_gate: beyond the east gate
+  loc.whispering_woods: in the Whispering Woods
+  loc.cliffs: below the cliffs
+  loc.tunnels: in the flooded tunnels
+
+  # Renown tiers
+  renown.tier.0: Unknown
+  renown.tier.1: Local
+  renown.tier.2: Respected
+  renown.tier.3: Renowned
+  renown.tier.4: Famous
+
+  # Refusals: shown on the notice line when a command cannot be carried out.
+  refusal.candidate_gone: That candidate has gone.
+  refusal.desk_unmanned: Nobody at the Guild Desk.
+  refusal.gold: Not enough gold.
+  refusal.character: Nobody by that name.
+  refusal.not_staff: Only staff work shifts.
+  refusal.bad_shift: That is not a shift the guild offers.
+  refusal.wrong_station: That station is for another role.
+  refusal.class: Not a class anyone can aspire to.
+  refusal.not_in_stash: The guild has none of those.
+  refusal.nothing_there: Nothing to take off.
+  refusal.not_for_sale: The outfitter does not sell that.
+  refusal.away: Away on a quest.
+  refusal.no_offer: No promotion is on offer.
+  refusal.prefab: Not something the guild can build.
+  refusal.renown: The guild is not well enough known yet.
+  refusal.blocked: There is a wall in the way.
+  refusal.wing_locked: The East Wing is still closed.
+  refusal.occupied: Something is already there.
+  refusal.door: That would block the door.
+  refusal.someone_there: Somebody is standing there.
+  refusal.access: That would cut somewhere off from the door.
+  refusal.instance: That is no longer there.
+  refusal.last_of_kind: The guild cannot run without one.
+  refusal.already_open: Already open.
+
+  # Treasury reasons
+  gold.reason.none: none
+  gold.reason.quest: quest reward
+  gold.reason.hire: hire
+  gold.reason.wage: wages
+  gold.reason.meal: canteen
+  gold.reason.construction: building
+  gold.reason.refund: refund
+  gold.reason.promotion: promotion
+  gold.reason.purchase: outfitter
+  gold.reason.expansion: East Wing
+
+  # Happiness modifiers
+  happiness.base: Baseline
+  happiness.long_shift: Long shift
+  happiness.night: Night hours
+  happiness.unpaid: Wages unpaid
+  happiness.decor: A pleasant hall
+  happiness.fed: Canteen open
+
+  # Objectives (nudges, never gates)
+  objective.hire: Hire an adventurer
+  objective.hire.hint: Candidates wait at the Guild Desk. Hiring needs a clerk on shift.
+  objective.return: See a quest come home
+  objective.return.hint: Adventurers choose their own work at the Quest Board. Speed time up and wait.
+  objective.canteen: Build a canteen
+  objective.canteen.hint: Hungry adventurers do worse on the road. Open Build (B) and place a Canteen.
+  objective.cook: Hire a cook
+  objective.cook.hint: A canteen serves nobody without a cook. Staff applicants come to the desk too.
+  objective.shift: Set somebody's shift
+  objective.shift.hint: Open a staff member's sheet and choose their hours. Nights cost happiness.
+  objective.equip: Equip an adventurer
+  objective.equip.hint: Loot and outfitter purchases go to the stash. Equip from the character sheet.
+  objective.aspire: Choose an aspiration
+  objective.aspire.hint: Pick a class for an adventurer to work toward. Training dummies help.
+  objective.promote: Promote an adventurer
+  objective.promote.hint: Experienced adventurers ask for promotion at the desk. It costs a fee.
+  objective.east_wing: Open the East Wing
+  objective.east_wing.hint: A better-known guild can buy the East Wing and build more.
+  objective.renowned: Become Renowned
+  objective.renowned.hint: Successful quests earn renown. Deaths cost it.

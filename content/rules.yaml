@@ -1,0 +1,91 @@
+# Every number the guild is paced and priced by, in one place, so tuning is a content edit.
+# Origins: the core-loop numbers are GuildGameV2's guild_rules.default; staff, services, renown
+# and hunger are the demo's own (V2 had planned them for M5 and M8 without numbers).
+
+starting_gold: 300
+start_minute: 480                 # day 1, 08:00
+board_capacity: 6
+quest_generation_interval_minutes: 300
+quest_generation_interval_per_tier: -30   # each renown tier posts work a little faster
+quest_expiry_minutes: 4320
+procedural_quest_percent: 50      # the rest come from the curated pool
+
+candidate_arrival_min_minutes: 420
+candidate_arrival_max_minutes: 1260
+candidate_window_minutes: 1440
+candidate_staff_percent: 30
+hire_cost_base: 60
+hire_cost_per_rank: 40
+hire_cost_per_point: 2
+staff_hire_cost: 45
+injury_default_minutes: 720
+
+# Movement: tenths of a game-minute per cell (V2 shipped 8).
+minutes_per_cell_tenths: 8
+idle_dwell_min: 1
+idle_dwell_max: 6
+idle_retry_minutes: 3
+rest_after_quest_minutes: 180   # back from the road, nobody goes straight out again
+
+# Needs: one need in the demo, the one a canteen answers.
+hunger_start: 80
+hunger_decay_per_hour: 5
+hunger_hungry_below: 40
+hunger_starving_below: 15
+hunger_after_meal: 100
+hunger_after_quest: 55
+well_fed_at_least: 60
+well_fed_leg_bonus: 1
+starving_leg_penalty: 2
+meal_price: 6
+
+# Staff.
+happiness_start: 70
+happiness_base: 70
+happiness_long_shift_from_hours: 8
+happiness_per_long_hour: -3
+happiness_per_night_hour: -2      # night is 22:00 to 06:00
+happiness_unpaid: -20
+happiness_per_decor: 1
+happiness_decor_max: 5
+happiness_well_fed_staff: 3       # a staffed canteen feeds the staff too
+happiness_drift_per_hour: 1
+quit_below: 15
+quit_after_hours: 24
+# Work speed is 75% at happiness 0 and 125% at 100.
+work_speed_min_percent: 75
+work_speed_max_percent: 125
+
+# Services.
+infirmary_session_minutes: 120
+infirmary_recovery_multiplier_staffed: 3
+infirmary_recovery_multiplier_unstaffed: 1
+service_patience_minutes: 90      # how long somebody queues at an unstaffed counter
+service_queue_poll_minutes: 10
+training_session_minutes: 30
+training_xp: 12
+training_preference_percent: 35   # chance an idle adventurer with an aspiration goes to train
+
+# Building.
+demolish_refund_percent: 50
+east_wing_cost: 350
+east_wing_renown_tier: 1
+
+# Renown.
+renown_per_success: [1, 2, 4, 6, 8, 10, 12]   # indexed by quest rank
+renown_per_death: -3
+renown_tiers: [0, 20, 60, 120, 200]
+renown_goal_tier: 3
+# Candidate rank weights F/E/D by renown tier: a better-known guild draws better applicants.
+candidate_rank_weights:
+  - [70, 25, 5]
+  - [60, 30, 10]
+  - [45, 40, 15]
+  - [35, 40, 25]
+  - [30, 40, 30]
+
+# The difficulty floor: a guild with nobody left and no money is sent a volunteer for free.
+volunteer_gold_below: 60
+
+# Autosave cadence: every day boundary.
+autosave_every_days: 1

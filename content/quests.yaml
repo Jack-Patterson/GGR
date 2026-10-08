@@ -1,0 +1,209 @@
+# Quests. The curated pool is GuildGameV2's eight starter templates verbatim plus seven written
+# for the demo (two after GuildGame V1's authored quests). A quest is a flat itinerary of legs;
+# exactly one objective, which alone decides success; the last leg is the return.
+# Targets follow the ladder: objective = target_base, encounter -2, travel -3, return -4, +-1.
+
+curated:
+  - id: quest.rat_cellar.f
+    title_key: quest.rat_cellar
+    desc_key: quest.rat_cellar.desc
+    rank: 0
+    gold: [20, 40]
+    xp: 30
+    injury_minutes: 480
+    legs:
+      - { kind: travel, minutes: 90, attr: vitality, target: 6 }
+      - { kind: objective, minutes: 120, attr: might, target: 9 }
+      - { kind: return, minutes: 90, attr: perception, target: 5 }
+    loot: [{ item: item.tallow_lantern, percent: 25 }]
+  - id: quest.lost_cat.f
+    title_key: quest.lost_cat
+    desc_key: quest.lost_cat.desc
+    rank: 0
+    gold: [10, 20]
+    xp: 15
+    legs:
+      - { kind: travel, minutes: 60, attr: agility, target: 5 }
+      - { kind: objective, minutes: 60, attr: perception, target: 8 }
+      - { kind: return, minutes: 60, attr: vitality, target: 4 }
+  - id: quest.market_watch.f
+    title_key: quest.market_watch
+    desc_key: quest.market_watch.desc
+    rank: 0
+    gold: [15, 25]
+    xp: 20
+    injury_minutes: 360
+    legs:
+      - { kind: objective, minutes: 90, attr: presence, target: 8 }
+      - { kind: return, minutes: 90, attr: agility, target: 4 }
+    loot: [{ item: item.tallow_lantern, percent: 15 }]
+  - id: quest.bandit_toll.f
+    title_key: quest.bandit_toll
+    desc_key: quest.bandit_toll.desc
+    rank: 0
+    gold: [35, 60]
+    xp: 40
+    legs:
+      - { kind: travel, minutes: 90, attr: agility, target: 7 }
+      - { kind: objective, minutes: 90, attr: might, target: 10 }
+      - { kind: return, minutes: 90, attr: vitality, target: 6 }
+  - id: quest.moonpetal.f
+    title_key: quest.moonpetal
+    desc_key: quest.moonpetal.desc
+    rank: 0
+    gold: [15, 30]
+    xp: 20
+    legs:
+      - { kind: travel, minutes: 60, attr: agility, target: 6 }
+      - { kind: objective, minutes: 90, attr: perception, target: 9 }
+      - { kind: return, minutes: 60, attr: vitality, target: 5 }
+    loot: [{ item: item.prayer_beads, percent: 10 }]
+  - id: quest.pilgrims.f
+    title_key: quest.pilgrims
+    desc_key: quest.pilgrims.desc
+    rank: 0
+    gold: [25, 45]
+    xp: 30
+    legs:
+      - { kind: travel, minutes: 90, attr: vitality, target: 6 }
+      - { kind: objective, minutes: 90, attr: presence, target: 9 }
+      - { kind: return, minutes: 90, attr: agility, target: 5 }
+    loot: [{ item: item.travel_breeches, percent: 10 }]
+
+  - id: quest.goblin_camp.e
+    title_key: quest.goblin_camp
+    desc_key: quest.goblin_camp.desc
+    rank: 1
+    gold: [40, 70]
+    xp: 45
+    injury_minutes: 600
+    legs:
+      - { kind: travel, minutes: 90, attr: vitality, target: 11 }
+      - { kind: encounter, minutes: 90, attr: perception, target: 12 }
+      - { kind: objective, minutes: 120, attr: might, target: 14 }
+      - { kind: return, minutes: 90, attr: agility, target: 10 }
+    loot: [{ item: item.copper_dagger, percent: 20 }, { item: item.oak_buckler, percent: 10 }]
+  - id: quest.smugglers_den.e
+    title_key: quest.smugglers_den
+    desc_key: quest.smugglers_den.desc
+    rank: 1
+    gold: [45, 75]
+    xp: 50
+    injury_minutes: 540
+    legs:
+      - { kind: travel, minutes: 120, attr: vitality, target: 10 }
+      - { kind: objective, minutes: 150, attr: arcana, target: 13 }
+      - { kind: return, minutes: 120, attr: perception, target: 9 }
+    loot: [{ item: item.leather_cap, percent: 30 }]
+  - id: quest.haunted_mill.e
+    title_key: quest.haunted_mill
+    desc_key: quest.haunted_mill.desc
+    rank: 1
+    gold: [90, 150]
+    xp: 90
+    legs:
+      - { kind: travel, minutes: 150, attr: vitality, target: 12 }
+      - { kind: encounter, minutes: 150, attr: perception, target: 13 }
+      - { kind: objective, minutes: 180, attr: arcana, target: 15 }
+      - { kind: return, minutes: 150, attr: agility, target: 11 }
+    loot: [{ item: item.ash_hunting_bow, percent: 15 }, { item: item.iron_helm, percent: 10 }]
+  - id: quest.arcane_anomaly.e
+    title_key: quest.arcane_anomaly
+    desc_key: quest.arcane_anomaly.desc
+    rank: 1
+    gold: [50, 90]
+    xp: 55
+    legs:
+      - { kind: travel, minutes: 90, attr: vitality, target: 11 }
+      - { kind: encounter, minutes: 90, attr: arcana, target: 12 }
+      - { kind: objective, minutes: 150, attr: arcana, target: 14 }
+      - { kind: return, minutes: 90, attr: perception, target: 10 }
+    loot: [{ item: item.prayer_beads, percent: 15 }]
+  - id: quest.salt_caravan.e
+    title_key: quest.salt_caravan
+    desc_key: quest.salt_caravan.desc
+    rank: 1
+    gold: [60, 100]
+    xp: 55
+    legs:
+      - { kind: travel, minutes: 120, attr: vitality, target: 11 }
+      - { kind: encounter, minutes: 120, attr: might, target: 12 }
+      - { kind: objective, minutes: 120, attr: presence, target: 14 }
+      - { kind: return, minutes: 120, attr: agility, target: 10 }
+    loot: [{ item: item.padded_jerkin, percent: 15 }]
+  - id: quest.flooded_tunnels.e
+    title_key: quest.flooded_tunnels
+    desc_key: quest.flooded_tunnels.desc
+    rank: 1
+    gold: [45, 80]
+    xp: 45
+    legs:
+      - { kind: travel, minutes: 90, attr: agility, target: 11 }
+      - { kind: objective, minutes: 120, attr: perception, target: 14 }
+      - { kind: return, minutes: 90, attr: vitality, target: 10 }
+    loot: [{ item: item.travel_breeches, percent: 20 }]
+
+  - id: quest.dragon_spur.d
+    title_key: quest.dragon_spur
+    desc_key: quest.dragon_spur.desc
+    rank: 2
+    gold: [150, 260]
+    xp: 150
+    injury_minutes: 720
+    legs:
+      - { kind: travel, minutes: 150, attr: vitality, target: 15 }
+      - { kind: encounter, minutes: 150, attr: perception, target: 16 }
+      - { kind: objective, minutes: 240, attr: might, target: 18 }
+      - { kind: return, minutes: 180, attr: agility, target: 14 }
+    loot: [{ item: item.iron_greatsword, percent: 8 }, { item: item.padded_jerkin, percent: 12 }, { item: item.oak_buckler, percent: 5 }]
+  - id: quest.bandit_camp.d
+    title_key: quest.bandit_camp
+    desc_key: quest.bandit_camp.desc
+    rank: 2
+    gold: [140, 220]
+    xp: 130
+    legs:
+      - { kind: travel, minutes: 120, attr: vitality, target: 15 }
+      - { kind: encounter, minutes: 120, attr: perception, target: 16 }
+      - { kind: objective, minutes: 180, attr: might, target: 18 }
+      - { kind: return, minutes: 120, attr: agility, target: 14 }
+    loot: [{ item: item.iron_helm, percent: 10 }, { item: item.iron_shortsword, percent: 15 }]
+  - id: quest.ancient_ruins.d
+    title_key: quest.ancient_ruins
+    desc_key: quest.ancient_ruins.desc
+    rank: 2
+    gold: [160, 240]
+    xp: 140
+    legs:
+      - { kind: travel, minutes: 150, attr: agility, target: 15 }
+      - { kind: encounter, minutes: 150, attr: arcana, target: 16 }
+      - { kind: objective, minutes: 180, attr: arcana, target: 18 }
+      - { kind: return, minutes: 150, attr: vitality, target: 14 }
+    loot: [{ item: item.oak_staff, percent: 12 }, { item: item.ash_hunting_bow, percent: 8 }]
+
+# Procedural quests: V1's "{objective} {target}" generator, rebuilt on V2's itinerary. Each
+# category fixes the leg kinds and the attribute each checks; targets come off the rank ladder,
+# rewards off the rank's gold range.
+procedural:
+  locations: [loc.river, loc.mines, loc.east_gate, loc.whispering_woods, loc.cliffs, loc.tunnels]
+  categories:
+    - id: eliminate
+      verb_key: proc.eliminate
+      targets: [target.bandits, target.wolves, target.forest_spirits]
+      legs: [[travel, vitality], [encounter, perception], [objective, might], [return, agility]]
+    - id: escort
+      verb_key: proc.escort
+      targets: [target.merchant, target.caravan, target.scholar]
+      legs: [[travel, vitality], [objective, presence], [return, agility]]
+    - id: gather
+      verb_key: proc.gather
+      targets: [target.herbs, target.mushrooms, target.ore]
+      legs: [[travel, agility], [objective, perception], [return, vitality]]
+    - id: investigate
+      verb_key: proc.investigate
+      targets: [target.ruins, target.lights, target.disappearances]
+      legs: [[travel, vitality], [encounter, perception], [objective, arcana], [return, perception]]
+    - id: scout
+      verb_key: proc.scout
+      targets: [target.pass, target.camp, target.ford]
+      legs: [[travel, agility], [objective, perception], [return, agility]]

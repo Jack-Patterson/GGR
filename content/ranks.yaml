@@ -1,0 +1,25 @@
+# The rank ladder, ported from GuildGameV2's ranks/ladder.yaml. The demo caps promotion at D;
+# C and above are declared so the curve has its endpoints and saves never reorder.
+#
+# attribute_floor = 3 + 2r. target_base is the objective check a job at this rung is authored
+# against; leg kinds offset it (encounter -2, travel -3, return -4).
+# modifier_cap is what items, skills and class may add to one check. V2's budget was 0 at F,
+# which left nothing for progression to give a new adventurer; the demo's balance pass raised
+# it to 2 + r, and the harness bands below were re-measured at that value.
+
+offsets: { objective: 0, encounter: -2, travel: -3, return: -4 }
+consequences:
+  objective: { nothing: 9, injury: 6, death: 5 }
+  other: { nothing: 13, injury: 6, death: 1 }
+
+ranks:
+  - { id: rank.f, letter: F, attribute_floor: 3, target_base: 9,  hire_baseline: 69,  modifier_cap: 2, injury_minutes: 480, promote_quests: 3, promote_xp: 90,  promote_fee: 40,  gold_min: 15,  gold_max: 45,  xp: 25 }
+  - { id: rank.e, letter: E, attribute_floor: 5, target_base: 14, hire_baseline: 81,  modifier_cap: 3, injury_minutes: 600, promote_quests: 5, promote_xp: 360, promote_fee: 90,  gold_min: 45,  gold_max: 100, xp: 50 }
+  - { id: rank.d, letter: D, attribute_floor: 7, target_base: 18, hire_baseline: 93,  modifier_cap: 4, injury_minutes: 720, promote_quests: 0, promote_xp: 0,   promote_fee: 0,   gold_min: 120, gold_max: 230, xp: 120 }
+  - { id: rank.c, letter: C, attribute_floor: 9, target_base: 22, hire_baseline: 105, modifier_cap: 5, injury_minutes: 720, promote_quests: 0, promote_xp: 0,   promote_fee: 0,   gold_min: 200, gold_max: 350, xp: 200 }
+  - { id: rank.b, letter: B, attribute_floor: 11, target_base: 26, hire_baseline: 117, modifier_cap: 6, injury_minutes: 720, promote_quests: 0, promote_xp: 0,  promote_fee: 0,   gold_min: 300, gold_max: 500, xp: 300 }
+  - { id: rank.a, letter: A, attribute_floor: 13, target_base: 29, hire_baseline: 129, modifier_cap: 7, injury_minutes: 720, promote_quests: 0, promote_xp: 0,  promote_fee: 0,   gold_min: 450, gold_max: 700, xp: 450 }
+  - { id: rank.s, letter: S, attribute_floor: 15, target_base: 32, hire_baseline: 141, modifier_cap: 8, injury_minutes: 720, promote_quests: 0, promote_xp: 0,  promote_fee: 0,   gold_min: 650, gold_max: 999, xp: 650 }
+
+# The demo's line through content, not code: promotion stops here.
+demo_rank_cap: 2

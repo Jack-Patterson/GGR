@@ -1,0 +1,10 @@
+[package]
+name = "ggr_core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Engine-free leaf: deterministic RNG, hashing, the error type."
+
+[dependencies]
+serde.workspace = true
+thiserror.workspace = true

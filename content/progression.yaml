@@ -1,0 +1,70 @@
+# Classes, skills and equipment: the demo cut of the progression system. Four branches, each
+# one tier deep (a base class and two advanced classes), drawn from GuildGame V1's class tree
+# and renamed to V2's branches. Skills from V1, capped at level 5 in the demo.
+
+branches:
+  - { id: fighter, name_key: branch.fighter }
+  - { id: rogue,   name_key: branch.rogue }
+  - { id: mage,    name_key: branch.mage }
+  - { id: holy,    name_key: branch.holy }
+
+# xp needed for levels 1..5 (cumulative).
+skill_levels: [20, 60, 120, 200, 300]
+# A skill adds level / 2 (rounded down) to checks on the attributes it helps.
+skills:
+  - { id: skill.blade,       branch: fighter, name_key: skill.blade,       helps: [might] }
+  - { id: skill.defense,     branch: fighter, name_key: skill.defense,     helps: [vitality, might] }
+  - { id: skill.marksman,    branch: rogue,   name_key: skill.marksman,    helps: [perception, agility] }
+  - { id: skill.subterfuge,  branch: rogue,   name_key: skill.subterfuge,  helps: [agility, presence] }
+  - { id: skill.elemental,   branch: mage,    name_key: skill.elemental,   helps: [arcana] }
+  - { id: skill.lore,        branch: mage,    name_key: skill.lore,        helps: [arcana, perception] }
+  - { id: skill.restoration, branch: holy,    name_key: skill.restoration, helps: [vitality, presence] }
+  - { id: skill.nature,      branch: holy,    name_key: skill.nature,      helps: [perception, vitality] }
+
+# XP a skill earns per quest leg that checks an attribute it helps (halved on a failed leg).
+skill_xp_per_leg: 10
+# Aptitude: each adventurer rolls one per branch, a percentage multiplier on skill xp.
+aptitude_min: 50
+aptitude_max: 150
+# Skills of the aspired class's requirements earn this much extra (percent).
+aspiration_bonus_percent: 50
+
+classes:
+  - { id: class.fighter, branch: fighter, tier: 0, name_key: class.fighter, desc_key: class.fighter.desc, bonus: { might: 1 } }
+  - { id: class.rogue,   branch: rogue,   tier: 0, name_key: class.rogue,   desc_key: class.rogue.desc,   bonus: { agility: 1 } }
+  - { id: class.mage,    branch: mage,    tier: 0, name_key: class.mage,    desc_key: class.mage.desc,    bonus: { arcana: 1 } }
+  - { id: class.holy,    branch: holy,    tier: 0, name_key: class.holy,    desc_key: class.holy.desc,    bonus: { presence: 1 } }
+
+  - { id: class.swordsman,    branch: fighter, tier: 1, name_key: class.swordsman,    desc_key: class.swordsman.desc,
+      requires: { skill.blade: 3 }, min_rank: 1, bonus: { might: 2, agility: 1 } }
+  - { id: class.guardian,     branch: fighter, tier: 1, name_key: class.guardian,     desc_key: class.guardian.desc,
+      requires: { skill.defense: 3, skill.blade: 1 }, min_rank: 1, bonus: { vitality: 2, might: 1 } }
+  - { id: class.ranger,       branch: rogue,   tier: 1, name_key: class.ranger,       desc_key: class.ranger.desc,
+      requires: { skill.marksman: 3, skill.nature: 1 }, min_rank: 1, bonus: { perception: 2, agility: 1 } }
+  - { id: class.assassin,     branch: rogue,   tier: 1, name_key: class.assassin,     desc_key: class.assassin.desc,
+      requires: { skill.subterfuge: 3, skill.blade: 1 }, min_rank: 1, bonus: { agility: 2, might: 1 } }
+  - { id: class.elementalist, branch: mage,    tier: 1, name_key: class.elementalist, desc_key: class.elementalist.desc,
+      requires: { skill.elemental: 3 }, min_rank: 1, bonus: { arcana: 2, vitality: 1 } }
+  - { id: class.enchanter,    branch: mage,    tier: 1, name_key: class.enchanter,    desc_key: class.enchanter.desc,
+      requires: { skill.lore: 3, skill.elemental: 1 }, min_rank: 1, bonus: { arcana: 1, presence: 2 } }
+  - { id: class.priest,       branch: holy,    tier: 1, name_key: class.priest,       desc_key: class.priest.desc,
+      requires: { skill.restoration: 3 }, min_rank: 1, bonus: { presence: 2, vitality: 1 } }
+  - { id: class.druid,        branch: holy,    tier: 1, name_key: class.druid,        desc_key: class.druid.desc,
+      requires: { skill.nature: 3, skill.restoration: 1 }, min_rank: 1, bonus: { perception: 2, arcana: 1 } }
+
+# Equipment: three armour slots (head, body, legs) and two hand slots; a two-handed item fills
+# both. Item names from V2's starter set plus a few for the casters. price is what the outfitter
+# charges; 0 means loot-only.
+items:
+  - { id: item.iron_greatsword,  name_key: item.iron_greatsword,  slot: main_hand, two_handed: true,  bonus: { might: 2 },              price: 0 }
+  - { id: item.ash_hunting_bow,  name_key: item.ash_hunting_bow,  slot: main_hand, two_handed: true,  bonus: { perception: 1, agility: 1 }, price: 0 }
+  - { id: item.iron_shortsword,  name_key: item.iron_shortsword,  slot: main_hand, bonus: { might: 1 },      price: 60 }
+  - { id: item.copper_dagger,    name_key: item.copper_dagger,    slot: main_hand, bonus: { agility: 1 },    price: 35 }
+  - { id: item.oak_staff,        name_key: item.oak_staff,        slot: main_hand, two_handed: true, bonus: { arcana: 1, vitality: 1 }, price: 70 }
+  - { id: item.oak_buckler,      name_key: item.oak_buckler,      slot: off_hand,  bonus: { vitality: 1 },   price: 0 }
+  - { id: item.tallow_lantern,   name_key: item.tallow_lantern,   slot: off_hand,  bonus: { perception: 1 }, price: 30 }
+  - { id: item.prayer_beads,     name_key: item.prayer_beads,     slot: off_hand,  bonus: { presence: 1 },   price: 40 }
+  - { id: item.leather_cap,      name_key: item.leather_cap,      slot: head,      bonus: { vitality: 1 },   price: 0 }
+  - { id: item.iron_helm,        name_key: item.iron_helm,        slot: head,      bonus: { vitality: 1, might: 1 }, price: 0 }
+  - { id: item.padded_jerkin,    name_key: item.padded_jerkin,    slot: body,      bonus: { vitality: 1 },   price: 55 }
+  - { id: item.travel_breeches,  name_key: item.travel_breeches,  slot: legs,      bonus: { agility: 1 },    price: 30 }

@@ -1,0 +1,12 @@
+[package]
+name = "ggr_smoke"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Headless smoke run and balance harness: PASS/FAIL lines and an exit code."
+
+[dependencies]
+ggr_core.workspace = true
+ggr_content.workspace = true
+ggr_sim.workspace = true
+ggr_save.workspace = true

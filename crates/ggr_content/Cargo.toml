@@ -1,0 +1,11 @@
+[package]
+name = "ggr_content"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Engine-free content: YAML types, the validator, sealed registries, localisation."
+
+[dependencies]
+ggr_core.workspace = true
+serde.workspace = true
+serde_yaml.workspace = true

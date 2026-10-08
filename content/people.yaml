@@ -1,0 +1,32 @@
+# Attributes and names, from GuildGameV2. The attribute order below is the sorted-id order V2
+# draws them in at generation; the code's Attr enum is pinned to it by a test.
+
+attributes:
+  - { id: agility,    name_key: attr.agility,    short_key: attr.agility.short,    min: 3, max: 20 }
+  - { id: arcana,     name_key: attr.arcana,     short_key: attr.arcana.short,     min: 3, max: 20 }
+  - { id: might,      name_key: attr.might,      short_key: attr.might.short,      min: 3, max: 20 }
+  - { id: perception, name_key: attr.perception, short_key: attr.perception.short, min: 3, max: 20 }
+  - { id: presence,   name_key: attr.presence,   short_key: attr.presence.short,   min: 3, max: 20 }
+  - { id: vitality,   name_key: attr.vitality,   short_key: attr.vitality.short,   min: 3, max: 20 }
+
+given_names: [Aldric, Bryn, Corvin, Dela, Emeric, Fenna, Garrick, Hesper, Isolde, Joric,
+              Kesta, Lorcan, Maera, Nevin, Orla, Perrin, Quilla, Rowan, Sabra, Tybalt]
+family_names: [Ashdown, Barrowe, Coldwater, Dunmoor, Ellersby, Fairholt, Greyfen, Harrowgate,
+               Ironvale, Jessup, Kettleby, Lindhollow, Marchwood, Northbrook, Oakenshaw,
+               Pellhame, Quarrick, Redmarsh, Stonewold, Thornbury]
+
+# Staff roles. Each mans one kind of station; wages are per hour of shift, paid at midnight.
+staff_roles:
+  - { id: role.clerk, name_key: role.clerk, station: desk,      wage_per_hour: 2 }
+  - { id: role.cook,  name_key: role.cook,  station: canteen,   wage_per_hour: 2 }
+  - { id: role.medic, name_key: role.medic, station: infirmary, wage_per_hour: 3 }
+
+# Shift templates a schedule is picked from (V2's M5 plan: a template plus a start hour, never
+# per-hour painting).
+shift_lengths: [6, 8, 10, 12]
+
+# Who the guild opens with.
+starting_roster:
+  adventurers: [0, 0, 0, 1]      # rank indices: three F and an E
+  staff:
+    - { role: role.clerk, start_hour: 8, length: 8 }
