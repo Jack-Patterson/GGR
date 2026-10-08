@@ -149,7 +149,7 @@ impl World {
     }
 
     /// Reserves a slot and walks to it. False if the slot cannot be reached.
-    fn go_to_slot(&mut self, id: CharId, inst: InstId, slot: usize) -> bool {
+    pub(crate) fn go_to_slot(&mut self, id: CharId, inst: InstId, slot: usize) -> bool {
         let cell = self.s.instances[inst as usize].slots[slot].cell;
         if self.s.chars[id as usize].cell == cell {
             // Already standing there: reserve and arrive at once, one minute later.
@@ -197,7 +197,9 @@ impl World {
                 }
             }
         }
-        if hungry {
+        // Only to a canteen somebody is cooking at (or about to be): an empty kitchen is not
+        // worth the walk, though someone already there when the cook leaves will queue.
+        if hungry && self.cook_on_duty() {
             if let Some((i, s)) = self.free_customer(PrefabKind::Canteen) {
                 if self.go_to_slot(id, i, s) {
                     return;
@@ -258,6 +260,11 @@ impl World {
         if !self.go_to_slot(id, i, s) {
             self.retry_idle_later(id);
         }
+    }
+
+    fn cook_on_duty(&self) -> bool {
+        self.ready_of_kind(PrefabKind::Canteen)
+            .any(|i| i.staff_slot().and_then(|s| s.holder).is_some())
     }
 
     fn free_customer(&self, kind: PrefabKind) -> Option<(InstId, usize)> {

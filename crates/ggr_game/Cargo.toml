@@ -3,11 +3,19 @@ name = "ggr_game"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
+description = "Guildmaster's Seat: the Bevy composition root — 3D view, HUD, input, audio, menus."
 
 [[bin]]
 name = "guildmasters_seat"
 path = "src/main.rs"
 
 [dependencies]
+ggr_core.workspace = true
+ggr_content.workspace = true
+ggr_sim.workspace = true
+ggr_save.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+directories.workspace = true
 bevy.workspace = true
 bevy_egui.workspace = true

@@ -417,28 +417,70 @@ fn an_unmanned_canteen_queues_rather_than_breaks() {
     w.s.guild.gold = 10_000;
     let canteen = w.content().prefab_index("prefab.canteen").unwrap();
     let (x, y) = legal_spot(&mut w, canteen);
+    let inst = match w
+        .execute(Command::Place {
+            prefab: canteen,
+            x,
+            y,
+        })
+        .unwrap()
+    {
+        CommandOk::Placed(i) => i,
+        _ => unreachable!(),
+    };
+    w.advance(w.content().prefabs[canteen].build_minutes);
+    // Somebody arrives at a counter with nobody behind it (the cook went home as they walked
+    // over): they queue, keep their place, and give up after their patience.
+    let id = (0..w.characters().len() as u32)
+        .find(|i| {
+            w.characters()[*i as usize].is_adventurer()
+                && w.characters()[*i as usize].state == CharState::Idle
+        })
+        .unwrap_or_else(|| {
+            w.advance(5);
+            0
+        });
+    let slot = w.instances()[inst as usize].free_customer_slot().unwrap();
+    w.s.chars[id as usize].state = CharState::Idle;
+    assert!(w.go_to_slot(id, inst, slot));
+    let mut queued_at = None;
+    for _ in 0..600 {
+        w.advance(1);
+        check_invariants(&w).unwrap();
+        let c = &w.characters()[id as usize];
+        if matches!(c.activity, Activity::Queueing { .. }) && queued_at.is_none() {
+            queued_at = Some(w.minute());
+        }
+        if queued_at.is_some() && !matches!(c.activity, Activity::Queueing { .. }) {
+            break;
+        }
+    }
+    let q = queued_at.expect("they queued");
+    assert!(
+        w.minute() - q >= w.content().rules.service_patience_minutes,
+        "left before their patience ran out"
+    );
+    assert_eq!(w.stats().meals, 0);
+}
+
+#[test]
+fn nobody_walks_to_a_kitchen_with_no_cook() {
+    let mut w = world(5);
+    w.s.guild.gold = 10_000;
+    let canteen = w.content().prefab_index("prefab.canteen").unwrap();
+    let (x, y) = legal_spot(&mut w, canteen);
     w.execute(Command::Place {
         prefab: canteen,
         x,
         y,
     })
     .unwrap();
-    // No cook hired: adventurers get hungry, go, queue, and give up after their patience.
-    let mut queued = false;
-    for _ in 0..(3 * MINUTES_PER_DAY) {
-        w.advance(1);
-        if w.characters()
-            .iter()
-            .any(|c| matches!(c.activity, Activity::Queueing { .. }))
-        {
-            queued = true;
-        }
-        if w.minute() % 60 == 0 {
-            check_invariants(&w).unwrap();
-        }
-    }
-    assert!(queued, "nobody ever queued at the unmanned canteen");
+    run_days(&mut w, 3);
     assert_eq!(w.stats().meals, 0);
+    assert!(!w
+        .characters()
+        .iter()
+        .any(|c| matches!(c.activity, Activity::Queueing { .. })));
 }
 
 fn hire_staff(w: &mut World, role_kind: PrefabKind, start: u8, len: u8) -> CharId {

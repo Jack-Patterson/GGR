@@ -242,3 +242,321 @@ strings:
   objective.east_wing.hint: A better-known guild can buy the East Wing and build more.
   objective.renowned: Become Renowned
   objective.renowned.hint: Successful quests earn renown. Deaths cost it.
+
+  # ---- Interface ----------------------------------------------------------------------------
+  hud.day: Day
+  hud.time: Time
+  hud.pace: Pace
+  hud.pause_tip: Pause (Space). Decisions can be made while paused.
+  hud.speed_tip: Game speed. 1× is one game-minute a second. Keys 1-5.
+  hud.treasury: Treasury
+  hud.renown: Renown
+  hud.renown_tip: Successful quests earn renown; deaths cost it. Each tier unlocks buildings, the East Wing and better applicants.
+  hud.build: Build
+  hud.build_tip: Build mode (B). Place rooms and furniture; the guild pays up front.
+  hud.menu: Menu
+  hud.menu_tip: Pause, save, load and options (Esc).
+  hud.howto_tip: How the guild works.
+
+  time.minutes: "{0}m"
+  time.hours_minutes: "{0}h {1}m"
+  time.days_hours: "{0}d {1}h"
+
+  state.idle: Idle
+  state.injured: Injured, resting
+  state.recovering: Recovering in the infirmary
+  state.at: "At the {0}"
+  state.walking_to: "Walking to the {0}"
+  state.walking: Walking
+  state.setting_out: Setting out on a quest
+  state.going_home: Going home
+  state.working_at: "Working at the {0}"
+  state.queueing: "Waiting to be served at the {0}"
+  state.away: Away on a quest
+  state.off_duty: Off duty
+  state.left: Left the guild
+  state.dead: Dead
+
+  roster.title: Roster
+  roster.adventurers: Adventurers
+  roster.staff: Staff
+  roster.search: Search names
+  roster.rank: Rank
+  roster.showing: "Showing {0} of {1}"
+  roster.empty: Nobody here yet.
+  roster.promotion: wants promotion
+  filter.all: All
+  filter.injured: Injured
+  filter.dead: Dead
+
+  objectives.button: "Guild aims {0}/{1}"
+  objectives.tip: Light nudges, never requirements (O).
+  objectives.next: Next aim
+  objectives.title: Guild aims
+  objectives.footer: Play however you like; these are only suggestions.
+
+  board.title: Quest Board
+  board.posted: Posted
+  board.underway: Underway
+  board.capacity: "{0} of {1} pinned"
+  board.empty_posted: Nothing posted.
+  board.empty_underway: No quests underway.
+  board.expires: "Expires in {0}"
+  board.due: "{0} · back in {1}"
+  chronicle.title: Chronicle
+  chronicle.empty: Nothing has happened yet.
+  chronicle.day: "Day {0}"
+  outfitter.title: Outfitter
+  outfitter.intro: Bought items go to the guild's stash. Equip them from a character's sheet.
+  outfitter.loot_only: loot only
+  outfitter.have: "held {0}"
+  outfitter.buy_tip: Buy one for the stash.
+  item.two_handed: two-handed
+
+  desk.title: Guild Desk
+  desk.manned: A clerk is at the desk.
+  desk.guildmaster: No clerk employed — you sign personally.
+  desk.tip: Hiring and promotions need a clerk at the desk. Clerks work shifts; set them on their sheet.
+  desk.nobody: Nobody waiting.
+  desk.candidate_n: "Candidate {0} of {1}"
+  desk.adventurer_rank: "Adventurer · rank {0}"
+  desk.leaves_in: "leaves in {0}"
+  desk.details: Details
+  desk.promotion: Promotion request
+
+  build.title: Build
+  build.done: Done
+  build.help: Pick something, then click the hall. Green fits; red says why not. Right-click to drop the tool.
+  build.takes: "Takes {0} to build"
+  build.needs_renown: "Needs renown: {0}"
+  build.demolish: Demolish tool
+  build.demolish_tip: Click a building to pull it down. Half the cost comes back; anyone using it finds something else to do.
+  build.east_wing: East Wing
+  build.east_wing_desc: Knock through to the disused wing and double the floor.
+  build.open_wing: "Open the East Wing · {0} g"
+
+  building.ready: In use
+  building.constructing: "Under construction · done in {0}"
+  building.demolished: Demolished
+  building.trains: Trains
+  building.staffed_by: Staffed by
+  building.unstaffed: Nobody on shift
+  building.in_use: In use
+  building.essential: The guild always keeps at least one of these.
+  building.demolish: "Demolish · refund {0} g"
+
+  sheet.close: Close
+  sheet.back_to: "Back to {0}"
+  sheet.esc_hint: Esc goes back, then closes
+  sheet.adventurer: Adventurer
+  sheet.staff: Staff
+  sheet.candidate: Candidate
+  sheet.building: Building
+  sheet.rank: "Rank {0}"
+  sheet.attributes: Attributes
+  sheet.cap: "Gear, skill and class add at most +{0} to any one check at this rank."
+  sheet.condition: Condition
+  sheet.health: Health
+  sheet.well: Well
+  sheet.injured_for: Injured for
+  sheet.hunger: Fed
+  sheet.record: Record
+  sheet.experience: Experience
+  sheet.quests: Quests
+  sheet.quests_value: "{0} won · {1} lost"
+  sheet.earned: Earned for the guild
+  sheet.next_rank: Toward promotion
+  sheet.next_rank_value: "{0}/{1} quests · {2}/{3} xp"
+  sheet.away_on: Away on
+  sheet.last_quest: Last quest
+  sheet.skills: Skills
+  sheet.level: "lvl {0}"
+  sheet.aptitude: Aptitude
+  sheet.aptitude_tip: How quickly skills in each branch grow for this adventurer.
+  sheet.aspiration: Aspiration
+  sheet.aspire_none: No aspiration
+  sheet.req_skill: "{0} level {1}"
+  sheet.req_rank: "Rank {0}"
+  sheet.equipment: Equipment
+  sheet.equip: Equip…
+  sheet.unequip: Take off
+  sheet.dismiss: Dismiss
+  sheet.dismiss_tip: They leave the guild for good. Their gear stays in the stash.
+  sheet.promotion_offer: "Ready for rank {0}"
+  sheet.promotion_help: Promoted adventurers take harder, better-paid work, and the rank's floor lifts every attribute.
+  sheet.promote: "Promote · {0} g"
+  sheet.not_now: Not now
+  sheet.shift: Shift
+  sheet.shift_length: Length
+  sheet.shift_start: Starts
+  sheet.shift_legend: Ink is on shift; red is on shift at night, which costs happiness.
+  sheet.happiness: Happiness
+  sheet.work_speed: "works at {0}%"
+  sheet.happiness_help: Happiness drifts toward the total below, a point an hour. Below 15 for a day, they quit.
+  sheet.terms: Terms
+  sheet.wage: Wage
+  sheet.per_day: "{0} g a day"
+  sheet.wage_rate: "{0} g an hour of shift"
+  sheet.wages_paid: Paid so far
+  sheet.station: Station
+  sheet.station_any: Any
+  sheet.no_station: There is nowhere for them to work. Build one.
+
+  candidate.fee: Fee
+  candidate.leaves_in: Leaves in
+  candidate.treasury_now: Treasury now
+  candidate.treasury_after: Treasury after
+  candidate.accept: "Accept · {0} g"
+  candidate.decline: Decline
+  candidate.volunteer: A volunteer. They ask for nothing.
+  candidate.staff_help: Staff start on an eight-hour day shift. Change it on their sheet once hired.
+
+  quest.eyebrow: "Quest · rank {0}"
+  quest.status.posted: Posted
+  quest.status.taken: Taken · setting out
+  quest.status.underway: Underway
+  outcome.succeeded: Resolved · Succeeded
+  outcome.failed: Resolved · Failed
+  outcome.died: Resolved · Died
+  outcome.expired: Resolved · Expired
+  quest.requirements: Requirements
+  quest.rank_at_least: "Rank {0} or higher"
+  quest.not_injured: Not injured
+  quest.rewards: Rewards
+  quest.gold: Gold
+  quest.experience: Experience
+  quest.loot: Possible loot
+  quest.taken_by: Taken by
+  quest.expires: Expires in
+  quest.due_back: Due back in
+  quest.paid: Paid
+  quest.found: Found
+  quest.itinerary: Itinerary
+  quest.check: "{0} against {1}"
+  quest.ahead: still ahead
+  quest.injury: injured
+  quest.death: killed
+  quest.report_tip: The die, then the attribute, then gear/skill/class (capped), then food, against the target.
+  quest.board_help: Adventurers choose their own work. One of the right rank will take this when they next read the board.
+  leg.travel: Travel
+  leg.encounter: Encounter
+  leg.objective: Objective
+  leg.return: Return
+
+  notice.day: "Day {0} begins."
+  notice.posted: "Posted: {0}."
+  notice.taken: "{0} takes {1}."
+  notice.succeeded: "{0} is back from {1} · +{2} g."
+  notice.failed: "{0} is back from {1}, empty-handed."
+  notice.died: "{0} did not come back from {1}."
+  notice.injured: "{0} was hurt."
+  notice.candidate: Somebody is waiting at the Guild Desk.
+  notice.hired: "{0} joins the guild."
+  notice.promotion_offered: "{0} asks for promotion."
+  notice.promoted: "{0} is now rank {1}."
+  notice.class: "{0} becomes a {1}."
+  notice.skill: "{0}: {1} level {2}."
+  notice.quit: "{0} has quit."
+  notice.built: "The {0} is finished."
+  notice.east_wing: The East Wing is open.
+  notice.renown: "The guild is now {0}."
+  notice.objective: "Aim met: {0}."
+
+  debug.title: Debug
+
+  # Menus
+  menu.title: Guildmaster's Seat
+  menu.tagline: They risk their lives. You run the business.
+  menu.new_game: New guild
+  menu.continue: Continue
+  menu.continue_day: "Continue · day {0}"
+  menu.load: Load
+  menu.save: Save
+  menu.options: Options
+  menu.howto: How the guild works
+  menu.quit: Quit
+  menu.paused: Paused
+  menu.resume: Resume
+  menu.main_menu: Main menu
+  menu.back: Back
+  menu.slot: "Slot {0}"
+  menu.autosave: Autosave
+  menu.slot_empty: Empty
+  menu.slot_summary: "Day {0} · {1} g · {2} people · renown {3}"
+  menu.save_here: Save here
+  menu.load_this: Load
+  menu.saved: "Saved to {0}."
+  menu.loaded: "Loaded {0}."
+  menu.are_you_sure: Are you sure?
+  menu.unsaved: Anything since your last save will be lost.
+  menu.yes: Yes
+  menu.no: No
+  menu.demo_note: This is a demo. Demo saves are not guaranteed to carry into the full game.
+
+  options.audio: Audio
+  options.volume: Volume
+  options.sfx: Sound effects
+  options.display: Display
+  options.fullscreen: Fullscreen
+  options.resolution: Window
+  options.ui_scale: Interface scale
+  options.language: Language
+  options.controls: Controls
+  options.rebind_help: Click a key, then press the new one. Esc cancels.
+  options.press_key: press a key…
+  options.duplicate: used twice
+  options.reset_keys: Reset to defaults
+  options.rebind_in_game: Rebinding is available from the pause menu during play.
+
+  action.pan_up: Pan forward
+  action.pan_down: Pan back
+  action.pan_left: Pan left
+  action.pan_right: Pan right
+  action.rotate_left: Turn left
+  action.rotate_right: Turn right
+  action.zoom_in: Zoom in
+  action.zoom_out: Zoom out
+  action.pause: Pause
+  action.speed_1: Speed 1×
+  action.speed_2: Speed 2×
+  action.speed_4: Speed 4×
+  action.speed_8: Speed 8×
+  action.speed_16: Speed 16×
+  action.next_character: Next character
+  action.prev_character: Previous character
+  action.inspect: Inspect selection
+  action.build: Build mode
+  action.objectives: Guild aims
+  action.debug: Debug panel
+
+  goal.title: The guild is Renowned
+  goal.body: Your guild's name is known up and down the valley. That is the end of the demo's road — but the guild keeps running for as long as you like.
+  goal.stats: "Day {0} · {1} quests won · {2} lost to the road · {3} hired · {4} built"
+  goal.thanks: Thank you for playing.
+  goal.keep_playing: Keep playing
+
+  intro.title: Welcome, Guildmaster
+  intro.body: You are not the hero. You hired them. Adventurers choose their own work from the Quest Board and go out to their fortunes or their deaths; you staff the desk, hire, promote, equip, and build the hall around them. Gold comes from quests that succeed. Renown comes from the same place, and is what makes the guild grow.
+  intro.controls: Click to select, click again (or Enter) to inspect. WASD pans, Z/X turns, scroll zooms. Space pauses; 1-5 set the speed. B builds. Esc backs out of anything.
+  intro.begin: Open the doors
+
+  howto.controls: Controls
+  howto.mouse: "Mouse: left-click selects, a second click inspects; right- or middle-drag turns the view; the wheel zooms."
+  howto.1.title: The loop
+  howto.1.body: Quests are posted to the board. Adventurers read it and take work of their own rank or lower, walk out of the door, and come back days later with gold and experience — or injured, or not at all. You never send anyone; you shape who is there to go.
+  howto.2.title: Quests are itineraries
+  howto.2.body: "A quest is a list of legs: travel, perhaps an encounter, the objective, and the road home. Each leg is a check: a d20 plus the adventurer's attribute plus their gear, skills and class, against a target. Only the objective decides success. A failed leg can injure, and on a bad day kill. Every quest's sheet shows exactly how each roll went."
+  howto.3.title: The desk
+  howto.3.body: Candidates arrive at the Guild Desk and wait a day. Hiring and promotion need a clerk on shift at the desk; a guild with no clerk at all is signed for by you. Applicants include staff — clerks, cooks and medics.
+  howto.4.title: Staff and shifts
+  howto.4.body: Staff work one shift a day, chosen as a length and a start hour. Long shifts and night hours cost happiness; happy staff work faster, unhappy ones eventually quit. Wages are paid at midnight. Every reason for a mood is on their sheet.
+  howto.5.title: Food and rest
+  howto.5.body: Adventurers get hungry in the hall. A staffed canteen feeds them for a few coins; well-fed adventurers travel better, starving ones worse. Injured adventurers recover over time, and much faster in a staffed infirmary.
+  howto.6.title: Growing adventurers
+  howto.6.body: Skills grow on quests and at training dummies, faster in branches the adventurer has an aptitude for. Give them an aspiration and they will train toward it and change class when ready. Experienced adventurers ask for promotion at the desk; promotion lifts every attribute and opens harder work.
+  howto.7.title: Gear
+  howto.7.body: Loot and the outfitter's wares go into the guild's stash. Equip them from a character's sheet. Gear, skill and class bonuses together are capped by rank, so equipment helps but never replaces experience.
+  howto.8.title: Building
+  howto.8.body: Build mode places furniture and rooms. Construction takes gold up front and some hours of work. Nothing may block the door or cut anything off from it. Demolishing returns half the cost. With enough renown you can open the East Wing.
+  howto.9.title: Renown
+  howto.9.body: Renown rises with every success (more for harder ranks) and falls with every death. Each tier unlocks buildings, better applicants and faster work on the board. Reach Renowned to finish the demo's road.
