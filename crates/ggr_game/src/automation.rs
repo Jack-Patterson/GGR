@@ -27,6 +27,7 @@ pub struct Args {
     pub scene: String,
     pub no_autosave: bool,
     pub exit_after: Option<i64>,
+    pub selftest_save: bool,
 }
 
 impl Args {
@@ -40,7 +41,10 @@ impl Args {
         let has = |n: &str| a.iter().any(|x| x == n);
         Args {
             seed: val("--seed").and_then(|v| v.parse().ok()),
-            new_game: (has("--new-game") || has("--autoplay") || has("--screenshot"))
+            new_game: (has("--new-game")
+                || has("--autoplay")
+                || has("--screenshot")
+                || has("--selftest-save"))
                 && val("--scene").as_deref() != Some("main"),
             autoplay: has("--autoplay"),
             speed: val("--speed").and_then(|v| v.parse().ok()),
@@ -51,6 +55,7 @@ impl Args {
             scene: val("--scene").unwrap_or_else(|| "hud".into()),
             no_autosave: has("--no-autosave") || has("--screenshot"),
             exit_after: val("--exit-after-minutes").and_then(|v| v.parse().ok()),
+            selftest_save: has("--selftest-save"),
         }
     }
 }
@@ -172,6 +177,38 @@ pub fn drive(
         if local.stage == 0 {
             pace.speed = s;
         }
+    }
+    if args.selftest_save && elapsed >= args.after_minutes && local.stage == 0 {
+        // Save through the game's own path (camera section and all), load it back, and
+        // compare: the same check a player's save makes, without a mouse.
+        let path = std::env::temp_dir().join(format!("ggr-selftest-{}.json", std::process::id()));
+        let mut rig = crate::camera::CameraRig {
+            distance: 22.5,
+            ..Default::default()
+        };
+        let mut before = 0;
+        let ok = crate::persist::save_to(&path, &mut session, &rig, "selftest").and_then(|_| {
+            // The camera rides in the save as a section of its own, so hash after saving.
+            before = session.world.as_ref().map_or(0, |w| w.state_hash());
+            // Move the camera after saving, so restoring it is actually tested.
+            rig.distance = 40.0;
+            crate::persist::load_from(&path, &content, &mut session, &mut rig)
+        });
+        let after = session.world.as_ref().map(|w| w.state_hash());
+        match ok {
+            Ok(()) if after == Some(before) && (rig.distance - 22.5).abs() < 1e-3 => {
+                println!("[selftest] PASS save/load through the game reproduces state hash {before:016x} and the camera");
+            }
+            Ok(()) => println!(
+                "[selftest] FAIL hash {before:016x} -> {after:?}, camera {}",
+                rig.distance
+            ),
+            Err(e) => println!("[selftest] FAIL {e}"),
+        }
+        let _ = std::fs::remove_file(&path);
+        local.stage = 9;
+        exit.write(AppExit::Success);
+        return;
     }
     if let Some(m) = args.exit_after {
         if elapsed >= m && args.screenshot.is_none() {

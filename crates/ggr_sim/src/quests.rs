@@ -179,10 +179,16 @@ impl World {
         if !c.is_adventurer() || c.quest.is_some() || c.is_injured(now) {
             return false;
         }
-        let eligible: Vec<QuestId> = self.eligible_quests(id).map(|q| q.id).collect();
-        if eligible.is_empty() {
+        // Adventurers reach for the hardest work they are ranked for: the best-paid jobs on the
+        // board at their own rank if there are any, else the next rank down.
+        let Some(best) = self.eligible_quests(id).map(|q| q.rank).max() else {
             return false;
-        }
+        };
+        let eligible: Vec<QuestId> = self
+            .eligible_quests(id)
+            .filter(|q| q.rank == best)
+            .map(|q| q.id)
+            .collect();
         let pick = self.s.rng.questgen().next_int(0, eligible.len() as i32) as usize;
         let qid = eligible[pick];
         let q = &mut self.s.quests[qid as usize];
@@ -368,7 +374,9 @@ impl World {
         }
         if succeeded {
             self.s.stats.succeeded += 1;
-            self.credit(gold, GoldReason::QuestReward);
+            // The adventurer keeps their share; the guild banks the rest.
+            let share = gold * self.content.rules.guild_share_percent / 100;
+            self.credit(share, GoldReason::QuestReward);
             for item in loot {
                 self.s.guild.stash[item as usize] += 1;
             }

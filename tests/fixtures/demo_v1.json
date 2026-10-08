@@ -5,7 +5,7 @@
   "summary": {
     "day": 3,
     "minute": 3960,
-    "gold": 740,
+    "gold": 557,
     "roster": 5,
     "renown": 13,
     "label": "fixture demo_v1"
@@ -408,8 +408,8 @@
     "guild": {
       "version": 1,
       "data": {
-        "gold": 740,
-        "last_change": 95,
+        "gold": 557,
+        "last_change": 66,
         "last_reason": "QuestReward",
         "renown": 13,
         "renown_tier": 0,
@@ -1683,10 +1683,10 @@
         "died": 0,
         "expired": 0,
         "failed": 0,
-        "gold_earned": 472,
-        "gold_spent": 32,
+        "gold_earned": 325,
+        "gold_spent": 68,
         "hires": 0,
-        "max_gold": 740,
+        "max_gold": 557,
         "meals": 0,
         "posted": 12,
         "promotions": 0,

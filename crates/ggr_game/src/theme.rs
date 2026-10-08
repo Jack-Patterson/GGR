@@ -82,7 +82,9 @@ pub fn apply_once(
     }
     v.widgets.noninteractive.bg_stroke = egui::Stroke::new(1.0, c32(RULE));
     v.widgets.noninteractive.bg_fill = c32(SURFACE);
-    v.widgets.inactive.bg_fill = c32(SURFACE);
+    // Rails, check boxes and tracks: a sunk fill so they read against the surface. Buttons
+    // use the weak fill and stay cream.
+    v.widgets.inactive.bg_fill = c32(RULE);
     v.widgets.inactive.weak_bg_fill = c32(SURFACE);
     v.widgets.inactive.bg_stroke = egui::Stroke::new(1.0, c32(RULE_MID));
     v.widgets.hovered.bg_fill = c32(SUNK);
@@ -98,6 +100,7 @@ pub fn apply_once(
         s.spacing.item_spacing = egui::vec2(6.0, 4.0);
         s.spacing.button_padding = egui::vec2(8.0, 3.0);
         s.spacing.interact_size.y = 22.0;
+        s.spacing.slider_width = 200.0;
         use egui::{FontFamily, FontId, TextStyle};
         s.text_styles = [
             (

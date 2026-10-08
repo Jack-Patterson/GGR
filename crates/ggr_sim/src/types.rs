@@ -396,6 +396,7 @@ pub enum GoldReason {
     Promotion,
     Purchase,
     Expansion,
+    Upkeep,
 }
 
 impl GoldReason {
@@ -411,6 +412,7 @@ impl GoldReason {
             GoldReason::Promotion => "gold.reason.promotion",
             GoldReason::Purchase => "gold.reason.purchase",
             GoldReason::Expansion => "gold.reason.expansion",
+            GoldReason::Upkeep => "gold.reason.upkeep",
         }
     }
 }

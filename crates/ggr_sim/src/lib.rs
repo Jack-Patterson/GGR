@@ -159,6 +159,7 @@ impl World {
     fn on_day_start(&mut self) {
         let day = self.day();
         self.pay_wages();
+        self.pay_upkeep();
         self.check_volunteer_floor();
         self.events.push(SimEvent::DayStarted { day });
     }

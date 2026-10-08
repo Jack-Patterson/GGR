@@ -212,6 +212,7 @@ strings:
   gold.reason.promotion: promotion
   gold.reason.purchase: outfitter
   gold.reason.expansion: East Wing
+  gold.reason.upkeep: upkeep
 
   # Happiness modifiers
   happiness.base: Baseline
@@ -543,7 +544,7 @@ strings:
   howto.controls: Controls
   howto.mouse: "Mouse: left-click selects, a second click inspects; right- or middle-drag turns the view; the wheel zooms."
   howto.1.title: The loop
-  howto.1.body: Quests are posted to the board. Adventurers read it and take work of their own rank or lower, walk out of the door, and come back days later with gold and experience — or injured, or not at all. You never send anyone; you shape who is there to go.
+  howto.1.body: Quests are posted to the board. Adventurers read it and take the hardest work they are ranked for, walk out of the door, and come back days later with gold and experience — or injured, or not at all. You never send anyone; you shape who is there to go.
   howto.2.title: Quests are itineraries
   howto.2.body: "A quest is a list of legs: travel, perhaps an encounter, the objective, and the road home. Each leg is a check: a d20 plus the adventurer's attribute plus their gear, skills and class, against a target. Only the objective decides success. A failed leg can injure, and on a bad day kill. Every quest's sheet shows exactly how each roll went."
   howto.3.title: The desk

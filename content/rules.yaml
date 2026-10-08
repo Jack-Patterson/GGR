@@ -13,7 +13,8 @@ procedural_quest_percent: 50      # the rest come from the curated pool
 candidate_arrival_min_minutes: 420
 candidate_arrival_max_minutes: 1260
 candidate_window_minutes: 1440
-candidate_staff_percent: 30
+candidate_staff_percent: 25
+candidate_staff_percent_when_needed: 55   # a station with nobody to work it draws applicants
 hire_cost_base: 60
 hire_cost_per_rank: 40
 hire_cost_per_point: 2
@@ -73,8 +74,12 @@ east_wing_renown_tier: 1
 
 # Renown.
 renown_per_success: [1, 2, 4, 6, 8, 10, 12]   # indexed by quest rank
+# The guild banks this share of a successful quest's gold; the adventurer keeps the rest.
+guild_share_percent: 70
+# Board and lodging per adventurer per day, by rank, paid at midnight with the wages.
+upkeep_per_rank: [4, 6, 9, 12, 15, 18, 21]
 renown_per_death: -3
-renown_tiers: [0, 20, 60, 120, 200]
+renown_tiers: [0, 15, 40, 70, 120]
 renown_goal_tier: 3
 # Candidate rank weights F/E/D by renown tier: a better-known guild draws better applicants.
 candidate_rank_weights:

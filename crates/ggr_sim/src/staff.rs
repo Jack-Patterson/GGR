@@ -136,6 +136,25 @@ impl World {
         }
     }
 
+    /// Board and lodging for every adventurer on the roster, by rank. A guild that cannot pay
+    /// simply does not: upkeep never drives the treasury negative or anyone away.
+    pub(crate) fn pay_upkeep(&mut self) {
+        let mut total = 0;
+        for c in &self.s.chars {
+            if c.is_adventurer() && c.on_roster() {
+                total += self
+                    .content
+                    .rules
+                    .upkeep_per_rank
+                    .get(c.rank as usize)
+                    .copied()
+                    .unwrap_or(0);
+            }
+        }
+        let total = total.min(self.s.guild.gold);
+        let _ = self.debit(total, GoldReason::Upkeep);
+    }
+
     pub(crate) fn pay_wages(&mut self) {
         let now = self.s.minute;
         for i in 0..self.s.chars.len() {

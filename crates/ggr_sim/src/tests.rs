@@ -30,7 +30,8 @@ fn check_invariants(w: &World) -> Result<(), String> {
     for c in w.characters() {
         let age = now - c.state_entered;
         let limit = match c.state {
-            CharState::Idle => 60,
+            // Idle includes waiting for a free seat in a crowded hall, retried every few minutes.
+            CharState::Idle => 6 * 60,
             CharState::Travel => 120,
             CharState::Interact => {
                 if matches!(c.activity, Activity::Working { .. }) {
@@ -792,6 +793,7 @@ fn every_refusal_and_reason_has_a_string() {
         GoldReason::Promotion,
         GoldReason::Purchase,
         GoldReason::Expansion,
+        GoldReason::Upkeep,
     ] {
         assert!(c.loc.has(g.key()), "missing {}", g.key());
     }
@@ -834,5 +836,58 @@ fn balance_bands_hold_at_two_thousand_runs() {
             "rank {rank}: success {s} per mille outside {lo}..{hi}"
         );
         assert!(d <= death, "rank {rank}: death {d} per mille above {death}");
+    }
+}
+
+#[test]
+fn a_reasonably_played_guild_reaches_renowned_and_never_spirals() {
+    // The demo's road, measured with the scripted reasonable player: Renowned inside a band of
+    // days that fits a 45-60 minute session at mixed speeds, and a guild that is still standing.
+    let goal = content().rules.renown_goal_tier;
+    for seed in [11u64, 12, 13] {
+        let mut w = world(seed);
+        let reached = harness::play_reasonably(&mut w, 18);
+        let day =
+            reached[goal].unwrap_or_else(|| panic!("seed {seed}: never reached the goal tier"));
+        assert!(
+            (5..=15).contains(&day),
+            "seed {seed}: goal reached on day {day}"
+        );
+        let living = w
+            .characters()
+            .iter()
+            .filter(|c| c.is_adventurer() && c.on_roster())
+            .count();
+        assert!(living >= 4, "seed {seed}: only {living} adventurers left");
+        assert!(w.guild().gold >= 0);
+        assert!(
+            w.stats().quits == 0,
+            "seed {seed}: staff quit under reasonable shifts"
+        );
+        check_invariants(&w).unwrap();
+    }
+}
+
+#[test]
+fn sixty_hands_off_days_never_soft_lock() {
+    // Nobody touches anything for two months: the guild may dwindle, but the treasury never
+    // goes negative, nothing gets stuck, and an empty broke guild is always offered a way back.
+    let mut w = world(21);
+    for _ in 0..60 {
+        w.advance(MINUTES_PER_DAY);
+        check_invariants(&w).unwrap();
+        let living = w
+            .characters()
+            .iter()
+            .any(|c| c.is_adventurer() && c.on_roster());
+        let rescue = w
+            .waiting_candidates()
+            .any(|c| c.cost <= w.guild().gold || c.volunteer);
+        assert!(
+            living || rescue,
+            "day {}: no adventurers and no affordable way back",
+            w.day()
+        );
+        w.drain_events();
     }
 }

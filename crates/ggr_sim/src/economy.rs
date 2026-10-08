@@ -139,6 +139,24 @@ impl World {
         }
     }
 
+    /// Roles with a built station but nobody on the roster to work it.
+    pub(crate) fn unstaffed_roles(&self) -> Vec<u8> {
+        (0..self.content.roles.len())
+            .filter(|r| {
+                let station = self.content.roles[*r].station;
+                let built = self.s.instances.iter().any(|i| {
+                    i.status != InstanceStatus::Demolished
+                        && self.content.prefabs[i.prefab as usize].kind == station
+                });
+                let employed = self.s.chars.iter().any(|c| {
+                    c.on_roster() && c.staff.as_ref().is_some_and(|s| s.role as usize == *r)
+                });
+                built && !employed
+            })
+            .map(|r| r as u8)
+            .collect()
+    }
+
     pub(crate) fn new_staff_info(&self, role: u8, start_hour: u8, length: u8) -> StaffInfo {
         StaffInfo {
             role,
@@ -153,11 +171,14 @@ impl World {
 
     pub(crate) fn on_candidate_arrival(&mut self) {
         let now = self.s.minute;
-        let staff = self
-            .s
-            .rng
-            .economy()
-            .chance(self.content.rules.candidate_staff_percent);
+        // Staff applicants come more often, and for the right job, when the guild has built a
+        // station nobody is employed to work (a canteen with no cook).
+        let percent = if self.unstaffed_roles().is_empty() {
+            self.content.rules.candidate_staff_percent
+        } else {
+            self.content.rules.candidate_staff_percent_when_needed
+        };
+        let staff = self.s.rng.economy().chance(percent);
         let cand = self.roll_candidate(staff, false);
         self.push_candidate(cand);
         // The next arrival: sooner for a better-known guild and a happy clerk.
@@ -188,12 +209,13 @@ impl World {
             .renown_tier
             .min(self.content.rules.candidate_rank_weights.len() - 1);
         let staff_role = if staff {
-            Some(
-                self.s
-                    .rng
-                    .chargen()
-                    .next_int(0, self.content.roles.len() as i32) as u8,
-            )
+            let needed = self.unstaffed_roles();
+            let pool: Vec<u8> = if needed.is_empty() {
+                (0..self.content.roles.len() as u8).collect()
+            } else {
+                needed
+            };
+            Some(pool[self.s.rng.chargen().next_int(0, pool.len() as i32) as usize])
         } else {
             None
         };

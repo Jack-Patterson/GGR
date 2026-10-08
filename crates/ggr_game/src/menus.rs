@@ -270,6 +270,8 @@ pub fn pause_menus(ctx: &egui::Context, h: &mut Hud) {
             egui::ScrollArea::vertical()
                 .max_height(ctx.viewport_rect().height() - 200.0)
                 .show(ui, |ui| {
+                    // Keep the key column clear of the scrollbar.
+                    ui.set_max_width(604.0);
                     for i in 1..=9 {
                         theme::section_label(ui, c.t(&format!("howto.{i}.title")));
                         ui.label(RichText::new(c.t(&format!("howto.{i}.body"))).size(13.0));
@@ -390,6 +392,7 @@ fn options(ui: &mut egui::Ui, h: &mut Hud, next: &mut Option<Option<MenuPage>>) 
     egui::ScrollArea::vertical()
         .max_height(220.0)
         .show(ui, |ui| {
+            ui.set_max_width(444.0);
             for a in Action::ALL {
                 ui.horizontal(|ui| {
                     ui.label(RichText::new(c.t(&a.label_key())).size(12.0));

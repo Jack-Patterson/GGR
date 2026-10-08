@@ -211,6 +211,9 @@ pub fn gameplay_input(
     egui_kb: Option<Res<bevy_egui::input::EguiWantsInput>>,
 ) {
     if session.mode != Mode::Playing {
+        if keys.just_pressed(KeyCode::Escape) {
+            ui.menu = None;
+        }
         return;
     }
     // Rebinding captures the next key press, whatever it is.

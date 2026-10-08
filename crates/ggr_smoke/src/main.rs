@@ -206,6 +206,23 @@ fn main() -> ExitCode {
         }
     }
 
+    if let Some(days) = arg(&args, "--play").and_then(|v| v.parse::<i64>().ok()) {
+        for seed in 1..=5u64 {
+            let mut p = World::new(content.clone(), seed);
+            let reached = harness::play_reasonably(&mut p, days);
+            let s = p.stats();
+            let living = p
+                .characters()
+                .iter()
+                .filter(|c| c.is_adventurer() && c.on_roster())
+                .count();
+            println!(
+                "[smoke] INFO played seed {seed} for {days} days: tiers reached on days {:?}; gold {}; renown {}; living adventurers {living}; {} won {} lost {} died; built {}; promotions {}; meals {}; quits {}",
+                reached, p.guild().gold, p.guild().renown, s.succeeded, s.failed, s.died, s.built, s.promotions, s.meals, s.quits
+            );
+        }
+    }
+
     if r.failures == 0 {
         println!("[smoke] All checks passed.");
         ExitCode::SUCCESS
